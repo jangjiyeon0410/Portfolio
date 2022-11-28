@@ -1,0 +1,73 @@
+#content {
+  text-align: left;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.lineMap {
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+h3 {
+  font-size: 1.75em;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.greetings_outter {
+  padding: 30px 0 10px;
+  margin-bottom: 30px;
+  background: #f8f8f8;
+}
+.greetings_wrap > p {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 1.125em;
+}
+.greetings_wrap > p strong {
+  color: #e71e10;
+}
+.greetings_wrap {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.greetings_wrap span {
+  display: block;
+  width: 90%;
+  border-radius: 50%;
+  margin-bottom: 25px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.greetings_outter .greetings_wrap span {
+  background: #fff;
+}
+.greetings_wrap > span {
+  background: #f8f8f8;
+}
+.greetings_wrap span img {
+  width: 100%;
+}
+.greetings_wrap .text_box img {
+  width: 80px;
+  float: right;
+}
+.greetings_wrap .text_box {
+  line-height: 1.5em;
+}
+.greetings_wrap .text_box p {
+  margin: 8px 0;
+  font-size: 0.88em;
+  text-align: justify;
+}
+.text_box {
+  margin-bottom: 100px;
+  text-align: left;
+}

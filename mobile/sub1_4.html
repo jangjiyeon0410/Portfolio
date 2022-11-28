@@ -1,0 +1,230 @@
+<? session_start(); ?>
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>한국만화영상진흥원 - 진흥원소개</title>
+
+    <link rel="apple-touch-icon-precomposed" href="app_icon.png" />
+    <link rel="apple-touch-startup-image" href="startup.png" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/sub_common.css" />
+    <link rel="stylesheet" href="./css/sub1_4.css" />
+
+    <script src="js/prefixfree.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/32507a69fa.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b7fdc899b7604f1a4802b625784e3a9f"></script>
+    <script src="./js/map.js"></script>
+    <script>
+      // <![CDATA[
+      try {
+        window.addEventListener(
+          "load",
+          function () {
+            setTimeout(scrollTo, 0, 0, 1);
+          },
+          false
+        );
+      } catch (e) {}
+      // ]]>
+    </script>
+  </head>
+
+  <body>
+    <? include "./common_header.html" ?>
+    <div class="main_sub">
+      <img src="./images/sub1/sub1_main.png" alt="" />
+      <h3>진흥원소개</h3>
+    </div>
+    <article id="content">
+      <div class="lineMap">
+        <a href="../index.html"><i class="fas fa-house"></i></a>
+        <i class="fa-solid fa-angle-right"></i>
+        <a href="./sub_1_1.html"><span>진흥원소개</span></a>
+        <i class="fa-solid fa-angle-right"></i>
+        <a href="./sub_1_2.html"><span>오시는길</span></a>
+      </div>
+      <section class="sub_nav">
+        <div class="nav_inner">
+          <ul>
+            <li><a href="./sub1_1.html">인사말</a></li>
+            <li><a href="./sub1_2.html">비전 및 경영목표</a></li>
+            <li><a href="./sub1_3.html">연혁</a></li>
+            <li><a class="current" href="./sub1_4.html">오시는길</a></li>
+          </ul>
+        </div>
+      </section>
+      <h2>오시는길</h2>
+      <p>한국만화영상진흥원으로,<br /><span>오시는 길</span>을 안내합니다.</p>
+      <div id="map"></div>
+      <div class="map_text">
+        <span>경기도 부천시 길주로 1 (상동)</span>
+        <p>
+          경기도 부천시 원미구에 위치한 한국만화영상진흥원은 지하철과 버스로
+          오실 수 있으며, 자가용으로 오실 경우 중동IC에 인접하여 있고 넓은
+          주차시설을 구비하고 있어 주차하기 용이합니다.
+        </p>
+      </div>
+      <div class="parking">
+        <div class="parking_inner">
+          <h3>주차장 안내</h3>
+          <img src="./images/sub1/parking.jpg" alt="주차장 지도 사진" />
+          <dl>
+            <dt>한국만화영상진흥원 주차장</dt>
+            <dd>주차료는 무료입니다.</dd>
+            <dd>유모차 이용 시 지하1층에 주차하시면 이동이 편리합니다.</dd>
+          </dl>
+          <dl>
+            <dt>야인시대 주차장</dt>
+            <dd>야인시대 공영주차장 주차료는 선불입니다.</dd>
+            <dd>
+              한국만화박물관 주차공간이 협소한 관계로 중형차 이상은 야인시대
+              공영주차장을 이용해 주십시오.
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <div class="car">
+        <h3><i class="fas fa-car-alt"></i>자가용 이용시</h3>
+        <span>외곽순환도로</span>
+        <p>
+          <span>네비게이션 검색어</span> : 한국만화박물관, 한국만화영상진흥원,
+          판타스틱 스튜디오, 야인시대 세트장
+        </p>
+        <dl>
+          <dt>판교방면 출발</dt>
+          <dd>
+            외곽순환도로 일산방향 → 중동 IC (인천방향) → 한국만화영상진흥원
+          </dd>
+        </dl>
+        <dl>
+          <dt>일산방면 출발</dt>
+          <dd>
+            외곽순환도로 판교방향 → 중동 IC(인천방향) → 한국만화영상진흥원
+          </dd>
+        </dl>
+        <dl>
+          <dt>경인고속도로</dt>
+          <dd>
+            경인고속도로 (인천방향) → 서운 JC에서 외곽순환도로 판교방향<br />→
+            중동 IC (인천방향)→ 한국만화영상진흥원
+          </dd>
+        </dl>
+        <dl>
+          <dt>계남대로</dt>
+          <dd>계남대로에서 인천방향 → 중동IC 지하도 → 한국만화영상진흥원</dd>
+        </dl>
+      </div>
+      <div class="subway">
+        <div class="subway_inner">
+          <h3><i class="fas fa-train"></i>지하철 이용시</h3>
+          <dl>
+            <dt><span>7</span><strong>7호선</strong></dt>
+            <dd>
+              <strong>삼산체육관역</strong> 하차, 5번 출구 (도보 3분 소요)
+            </dd>
+          </dl>
+          <dl>
+            <dt><span>1</span><strong>1호선</strong></dt>
+            <dd>
+              <strong>부개역</strong> 하차, 2번 출구(삼산체육관 방향)로 나와
+              버스 이용, 79번 한국만화박물관 하차 (10분 소요)
+            </dd>
+            <dd>
+              <strong>송내역</strong> 하차, 2번 출구로 나와 북부역 광장에서 버스
+              이용, 37번 한국만화박물관 하차(20분 소요) 또는 87번 상동호수공원,
+              한국만화박물관 후문 하차(25분 소요)
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <div class="bus">
+        <h3><i class="fas fa-bus"></i>대중교통 이용시</h3>
+        <ul>
+          <li>
+            <strong>79번</strong
+            ><span>부개역 > 부개역, 혜광교회, 부평동중 > 한국만화박물관</span>
+          </li>
+          <li>
+            <strong>87번</strong
+            ><span
+              >송내역 > 송내역, 중앙공원, 현대백화점, 부천한국만화박물관 >
+              한국만화박물관</span
+            >
+          </li>
+          <li>
+            <strong>37번</strong
+            ><span
+              >송내역 > 송내역, 현대백화점, 부천한국만화박물관 >
+              한국만화박물관</span
+            >
+          </li>
+          <li>
+            <strong>588번</strong
+            ><span
+              >부개주공3단지 > 부개주공3단지, 부개여고, 농협로타리, 부개여고,
+              호수공원 > 아인스월드</span
+            >
+          </li>
+          <li>
+            <strong>1200번</strong
+            ><span
+              >부평구청 > 부평구청, 부개주공, 합정전철역, 신촌전철역, 이대역,
+              서울역 > 부개주공아파트</span
+            >
+          </li>
+          <li>
+            <strong>7-2번</strong
+            ><span
+              >송내역 > 송내역, 반달마을구, 경남아파트, 삼성홈플러스,
+              석천초등학교 > 야인시대세트장</span
+            >
+          </li>
+          <li>
+            <strong>5-2번</strong
+            ><span
+              >부천북부역 > 부천북부역, 대성병원, 원미구청, 복사골마을, 송내역,
+              삼성홈플러스 > 한국만화박물관</span
+            >
+          </li>
+          <li>
+            <strong>5-5번</strong
+            ><span
+              >우일주유소 > 우일주유소, 부천북부역, 원미구청, 부천체육관,
+              은하마을 > 야인시대세트장 후문</span
+            >
+          </li>
+          <li>
+            <strong>23-2번</strong
+            ><span
+              >계수동 > 계수동, 신앙촌입구, 청구아파트, 부천대학, 부천시청,
+              드림피아 > 영상단지후문</span
+            >
+          </li>
+          <li>
+            <strong>83번</strong
+            ><span
+              >영등포 > 영등포역, 신도림역, 구로역, 역곡남부역, 복사골문화센타 >
+              야인시대후문</span
+            >
+          </li>
+          <li>
+            <strong>53번</strong
+            ><span
+              >소사역 > 중동역 > 송내역 > 상동역 > 삼삼체육관역.영상문화단지정문
+              > 아인스월드(회차점)</span
+            >
+          </li>
+        </ul>
+      </div>
+    </article>
+    <? include "./common_footer.html" ?>
+    <script src="./js/sub1.js"></script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+@keyframes top{
+    from{transform: translateY(100px); opacity:0;}
+    to{transform:translateY(0); opacity:1;}
+}
+
+.contentArea section.scroll_move{
+    animation: top 1.3s forwards;
+}
+.contentArea section{
+    opacity: 0;
+}
+
+.contentArea{
+    width: 1200px;
+    margin: 0 auto;
+    line-height: 2.5em;
+}
+
+section{
+    overflow: hidden;
+    position: relative;
+}
+section h3{
+    float: left;
+    font-size: 2.25em;
+}
+section i{
+    margin-left: 10px;
+    color: #e71e10;
+}
+section ul, section div{
+    float: right;
+    width: 750px;
+    font-size: 1.125em;
+    margin: 40px 0 150px;
+}
+section ul::after, section dt::after{
+    content: '';
+    width: 750px;
+    height: 2px;
+    background: #333;
+    position: absolute;
+    top: 20px;
+    left: 450px;
+    transition: all .5s;
+}
+
+section ul:hover::after, section dl:hover dt::after{
+    background-color: #e71e10;
+}
+section dt::after{
+    top: 50px;
+    left: -5px;
+}
+section li span{
+    display: block;
+    margin-left: 10px;
+}
+
+section div{
+    margin-top: 0;
+}
+section dl{
+    position: relative;
+    margin-bottom: 70px;
+}
+section dt{
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+section table{
+    margin-top: 30px;
+}
+section table, th, td{
+    width: 750px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    font-size: 0.875em;
+    line-height: 2em;
+}

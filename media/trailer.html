@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>In The Mood For Love</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="app_icon.png">
+    <link rel="apple-touch-startup-image" href="startup.png">
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/sub.css">
+
+    <script src="js/prefixfree.min.js"></script>
+
+    <script>
+     // <![CDATA[
+      try {
+        window.addEventListener(
+          "load",
+          function () {
+            setTimeout(scrollTo, 0, 0, 1);
+          },
+          false
+        );
+      } catch (e) {}
+      // ]]>
+      // youtube service worker preload
+      self.addEventListener("activate", (event) => {
+        event.waitUntil(async function () {
+          // Feature-detect
+          if (self.registration.navigationPreload) {
+            // Enable navigation preloads!
+            console.log("Enable navigation preloads!");
+            await self.registration.navigationPreload.enable();
+          }
+          return;
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="skipNav">
+      <a href="#content">Go to body contents</a>
+      <a href="#gnb">Go to navigation</a>
+    </div>
+
+    <div id="wrap">
+      <div class="videoBox filter">
+        <img src="./images/trailer.jpeg" alt="">
+        <a class="down" href="#"></a>
+      </div>
+      <header id="headerArea">
+        <div class="headerInner">
+          <h1><a href="./index.html">In The Mood For Love</a></h1>
+          <a class="menuOpen" href="#"><span>Menu Open</span></a>
+          <nav id="gnb">
+            <h2 class="hidden">Navigation Area</h2>
+            <ul>
+              <li>
+                <h3><a href="./about.html">About</a></h3>
+              </li>
+              <li>
+                <h3><a href="./character.html">Character</a></h3>
+              </li>
+              <li>
+                <h3><a href="./trailer.html">Trailer</a></h3>
+              </li>
+              <li>
+                <h3><a href="./gallery.html">Gallery</a></h3>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <article id="content">
+        <h2>Trailer</h2>
+        <div class="trailer_wrap scroll">
+          <div class="trailer_lst">
+            <div class="ttl">
+              <h3>Ofiicial Trailer</h3>
+              <p>
+                To mark the 20th anniversary of IN THE MOOD FOR LOVE, Block 2
+                Distribution has released a commemorative trailer of the Wong
+                Kar Wai classic.
+              </p>
+            </div>
+            <ul>
+              <li>
+                <a href="#">
+                  <div class="image">
+                    <img src="./images/trailer01.jpg" alt="">
+                  </div>
+                  <dl>
+                    <dt>Official Trailer | 20th Anniversary Restoration</dt>
+                    <dd>
+                      IN THE MOOD FOR LOVE celebrates its 20th anniversary with
+                      a stunning new restoration. Streaming exclusively in Latin
+                      America, Turkey & Scandinavia, plus select cinemas in
+                      Mexico and Colombia, as part of “In Love. The Cinema of
+                      Wong Kar Wai”
+                    </dd>
+                  </dl>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="image">
+                    <img src="./images/trailer02.jpeg" alt="">
+                  </div>
+                  <dl>
+                    <dt>In the Mood for Love (2000) ORIGINAL TRAILER</dt>
+                    <dd>
+                      Directed by Kar-Wai Wong and starring Tony Chiu-Wai Leung,
+                      Maggie Cheung and Ping Lam Siu.
+                    </dd>
+                  </dl>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="image">
+                    <img src="./images/trailer03.jpeg" alt="">
+                  </div>
+                  <dl>
+                    <dt>In The Mood For Love - Yumeji's Theme</dt>
+                    <dd>
+                      In The Mood For Love directed by Wong Kar-wai Music:
+                      Yumeji's Theme (Extended Version) by Shigeru Umebayashi
+                      Original Motion Picture
+                    </dd>
+                  </dl>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="image">
+                    <img src="./images/trailer04.jpeg" alt="">
+                  </div>
+                  <dl>
+                    <dt>
+                      In The Mood For Love 4K | Official Trailer (English)
+                    </dt>
+                    <dd>
+                      To mark the 20th anniversary of IN THE MOOD FOR LOVE,
+                      Block 2 Distribution has released a commemorative trailer
+                      of the Wong Kar Wai classic.
+                    </dd>
+                  </dl>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="trailer_pop"></div>
+        <div class="trailer_pop_bg"></div>
+        <div class="music scroll">
+          <div class="inner">
+            <div class="title">
+              <h3>Music</h3>
+              <p>
+                The title track "Hua Yang De Nian Hua" is a song by famous
+                singer 'Zhou Xuan' from the Solitary Island period.<br>The
+                1946 song is a paean to a happy past and an oblique metaphor for
+                the darkness of Japanese-occupied Shanghai.<br>Wong also set
+                the song to his 2000 short film, named Hua Yang De Nian Hua,
+                after the track.
+              </p>
+            </div>
+            <div class="music_box">
+              <div class="music_discription">
+                <p>
+                  Umebayashi Shigeru’s sad waltz<br>
+                  <span>‘Yumeji’s Theme’</span> is a short, hypnotic string
+                  arrangement that sounds both beautiful and unsettling, thanks
+                  to the harrowing isolated violin melody at the song’s core.
+                  Surprisingly, the first time it comes up in the film, it feels
+                  out of place, almost contrapuntal to the images on-screen.
+                  After all, Umebiyashi originally composed ‘Yumeji’s Theme’ for
+                  Suzuki Seijun’s 1991 feature, YUMEJI. On top of that, the
+                  haunting aura that the song emanates feels strange and
+                  unwarranted.
+                </p>
+              </div>
+              <div class="player">
+                <img class="vinyl-cover" src="./images/music.jpg" alt="">
+                <div class="vinyl_box">
+                  <img class="vinyl" src="./images/music_vinyl.png" alt="">
+                </div>
+                <ul class="click_box">
+                  <li>
+                    <a class="playBtn" href="#">Play</a>
+                  </li>
+                  <li>
+                    <a class="stopBtn" href="#">Stop</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <footer id="footerArea">
+        <div class="footerInner">
+          <address>
+            © Block 2 Pictures / Jet Tone Production / Orly Films / Paradis
+            Films
+          </address>
+          <span>Wong Kar-Wai</span>
+          <a class="topMove" href="#">Top</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/video.js"></script>
+    <script src="./js/trailer.js"></script>
+    <script src="./js/music.js"></script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+.top_box, .con2, .con4, .con6{
+    width: 100%;
+    background: #f8f8f8;
+    padding: 50px 0;
+}
+.con1, .con3, .con5{
+    padding: 65px 0;
+}
+.con6{
+    border-bottom: 20px solid #fff;
+}
+.lineMap, .top, .click{
+    width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.top h3{
+    font-size: 1.75em;
+    font-weight: 700;
+}
+.top img{
+    width: 100%;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+.top p {
+    line-height: 1.5em;
+}
+
+.con2 .text_lr, .con4 .text_lr, .con6 .text_lr{
+    text-align: right;
+}
+.click span{
+    font-size: 1.125em;
+    font-weight: 700;
+    color: #e71e10;
+}
+.click h4{
+    font-size: 2em;
+    font-weight: 700;
+    margin: 15px 0;
+}
+.click img{
+    width: 100%;
+    border-radius: 10px;
+}
+.click a{
+    display: block;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 1.125em;
+    color: #e71e10;
+}
+.click a i{
+    margin-left: 10px;
+}
+.click ul{
+    display: none;
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 20px 15px;
+}
+.con1 ul, .con3 ul, .con5 ul{
+    background: #f8f8f8;
+}
+.con2 ul, .con4 ul, .con6 ul{
+    background: #fff;
+}
+.click dl{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    line-height: 1.5em;
+}
+.click dt{
+    margin-right: 10px;
+    font-weight: 600;
+    width: 56px;
+    height: 20px;
+    text-align: justify;
+}
+.click dt::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}

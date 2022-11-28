@@ -1,0 +1,97 @@
+/* CI소개 본문 영역 */
+@keyframes top{
+    from{transform: translateY(60px); opacity:0;}
+    to{transform:translateY(0); opacity:1;}
+}
+@keyframes top2{
+    from{transform: translateY(30px); opacity:0;}
+    to{transform:translateY(0); opacity:1;}
+}
+
+.main_grid.scroll_move, .contentArea p.scroll_move, .contentArea ul.scroll_move li{
+    animation: top  1.3s forwards;
+}
+.contentArea ul.scroll_move li:nth-of-type(1){
+    animation-delay: .2s;
+}
+.contentArea ul.scroll_move li:nth-of-type(2){
+    animation-delay: .4s;
+}
+.contentArea ul.scroll_move li:nth-of-type(3){
+    animation-delay: .6s;
+}
+.main_grid, .contentArea p, .contentArea ul li{
+    opacity: 0;
+}
+
+#content{
+    position: relative;
+}
+
+.contentArea{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative
+}
+.contentArea::after{
+    content: '';
+    width: 2000px;
+    height: 1220px;
+    background: #f8f8f8;
+    border-radius: 400px 0 0 0;
+    position: absolute;
+    top:-100px;
+    left: -400px;
+    z-index: -1;
+}
+.contentArea .main_grid{
+    width: 1200px;
+    height: 380px;
+    margin: 0 auto;
+    border-radius: 200px 200px 200px 0;
+    box-shadow: 2px 2px 30px 0 rgba(0, 0, 0, 10%);
+    background: url(../images/content4/grid_main.jpg)
+}
+.contentArea .main_grid img{
+    position: absolute;
+    top: 50px;
+    left: 200px;
+}
+.contentArea p{
+    margin-top: 120px;
+    font-size: 1.25em;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+.contentArea p span{
+    color: #e71e10;
+}
+.contentArea ul{
+    overflow: hidden;
+}
+.contentArea li{
+    float: left;
+    width: 360px;
+    height: 260px;
+    border-radius: 100px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 10%);
+    margin: 120px 20px 350px 20px;
+    position: relative;
+    background: url(../images/content4/grid.jpg);
+}
+.contentArea li span{
+    display: block;
+    margin: 40px 0 40px;
+    font-size: 1.125em;
+    font-weight: 500;
+}
+.contentArea li span:after{
+    content: '';
+    width: 280px;
+    height: 1px;
+    background-color: #ccc;
+    position: absolute;
+    top: 85px;
+    left: 50px;
+}

@@ -1,0 +1,110 @@
+<!-- 헤더 공통 요소 -->
+
+<div id="skipNav">
+  <a href="#content">본문바로가기</a>
+  <a href="#gnb">글로벌네비게이션바로가기</a>
+</div>
+<div class="wrap">
+  <header id="headerArea">
+    <div class="headerInner">
+      <h1><a href="../index.html">한국만화영상진흥원로고</a></h1>
+      <nav id="gnb">
+        <h2 class="hidden">글로벌네비게이션영역</h2>
+        <ul class="dropdownmenu">
+          <li class="m1 menu">
+            <h3>
+              <a class="depth1" href="../sub1/sub_1_1.html">진흥원소개</a>
+            </h3>
+            <ul>
+              <li><a href="../sub1/sub_1_1.html">인사말</a></li>
+              <li><a href="../sub1/sub_1_2.html">비전 및 경영목표</a></li>
+              <li><a href="../sub1/sub_1_3.html">연혁</a></li>
+              <li><a href="../sub1/sub_1_4.html">CI소개</a></li>
+              <li><a href="../sub1/sub_1_5.html">오시는길</a></li>
+            </ul>
+          </li>
+          <li class="m2 menu">
+            <h3><a class="depth1" href="../sub2/sub_2_1.html">사업소개</a></h3>
+            <ul>
+              <li><a href="../sub2/sub_2_1.html">창작 및 제작지원</a></li>
+              <li><a href="../sub2/sub_2_2.html">만화인력양성</a></li>
+              <li><a href="../sub2/sub_2_3.html">우수만화 콘텐츠 발굴</a></li>
+              <li><a href="../sub2/sub_2_4.html">창작 인프라 지원</a></li>
+              <li><a href="../sub2/sub_2_5.html">만화문화 확산</a></li>
+            </ul>
+          </li>
+          <li class="m3 menu">
+            <h3><a class="depth1" href="../sub3/sub_3_1.html">대관안내</a></h3>
+            <ul>
+              <li><a href="../sub3/sub_3_1.html">시설안내</a></li>
+              <li><a href="../sub3/sub_3_2.html">이용안내</a></li>
+              <li><a href="../sub3/sub_3_3.html">대관현황</a></li>
+            </ul>
+          </li>
+          <li class="m4 menu">
+            <h3><a class="depth1" href="../sub4/sub_4_1.html">클러스터</a></h3>
+            <ul>
+              <li><a href="../sub4/sub_4_1.html">클러스터소개</a></li>
+              <li><a href="../sub4/sub_4_2.html">이용안내</a></li>
+            </ul>
+          </li>
+          <li class="m5 menu">
+            <h3>
+              <a class="depth1" href="../sub5/sub_5_1.html">헬프데스크</a>
+            </h3>
+            <ul>
+              <li><a href="../sub5/sub_5_1.html">헬프데스크소개</a></li>
+              <li><a href="../sub5/sub_5_2.html">동영상안내</a></li>
+              <li><a href="../sub5/sub_5_3.html">상담신청</a></li>
+              <li><a href="../sub5/sub_5_4.html">FAQ</a></li>
+            </ul>
+          </li>
+          <li class="m6 menu">
+            <h3>
+              <a class="depth1" href="../notice/list.php">진흥원소식</a>
+            </h3>
+            <ul>
+              <li><a href="../notice/list.php">공지사항</a></li>
+              <li><a href="../gallery/list.php">포토갤러리</a></li>
+              <li><a href="../toon/list.php">추천만화</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="topmenu">
+        <?
+        @extract($_GET); 
+        @extract($_POST); 
+        @extract($_SESSION); 
+        // $userid = $__SESSTION['userid'];
+
+        if(!$userid)
+        {
+      ?>
+        <ul>
+          <li>
+            <a href="../login/login_form.php">로그인</a>
+          </li>
+          <li>
+            <a href="../member/join.html">회원가입</a>
+          </li>
+        </ul>
+        <?
+        }
+        else
+        {
+      ?>
+        <ul>
+          <li>
+            <a href="../login/logout.php">로그아웃</a>
+          </li>
+          <li>
+            <a href="../member/member_form_modify.php">정보수정</a>
+          </li>
+        </ul>
+        <?
+        }
+      ?>
+      </div>
+    </div>
+  </header>

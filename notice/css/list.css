@@ -1,0 +1,111 @@
+
+/* 목록 리스트형 컨텐츠 */
+.list_content.list li dl{
+  display: flex;
+  justify-content: space-around;
+  background-color: #f3f3f3;
+  font-size: 1.125em;
+  overflow: hidden;
+  padding: 20px 0;
+  text-align: center;
+}
+.list_content.list .list_title {
+  border-top: 2px solid #ececec;
+  border-bottom: 2px solid #ececec;
+}
+.list_content.list .list_title dl{
+  font-weight: 500;
+}
+.list_content.list .list_item dl {
+  background: #fff;
+  border-bottom: 3px solid #f8f8f8;
+  transition: all .3s;
+}
+.list_content.list .list_item dl:hover{
+  background: #f9f9f9
+}
+
+.list_content.list dl dd:nth-of-type(1) {
+  width: 10%;
+}
+.list_content.list dl dd:nth-of-type(2) {
+  width: 10%;
+}
+.list_content.list dl dt{
+  width: 40%;
+  text-align: left;
+  margin-left: 5%;
+}
+.list_content.list dl dd:nth-of-type(3) {
+  width: 10%;
+}
+.list_content.list dl dd:nth-of-type(4){
+  width: 15%;
+}
+.list_content.list dl dd:nth-of-type(5){
+  width: 10%;
+}
+.list_content.list .list_item dt p{
+  display: none;
+}
+
+
+/* 목록 박스형 컨텐츠 */
+
+.list_content.box .list_title,  
+.list_content.box .list_item dd:nth-of-type(1),
+.list_content.box .list_item dd:nth-of-type(3),
+.list_content.box .list_item dd:nth-of-type(5){
+  display: none;
+}
+.list_content.box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.list_content.box .list_item{
+  width: calc(50% - 10px);
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  margin: 10px 0;
+  transition: all .3s;
+}
+.list_content.box .list_item:hover{
+  border: 1px solid #e71e10;
+}
+.list_content.box dt a{
+  font-size: 1.25em;
+  font-weight: 500;
+  margin-left: 5px;
+}
+.list_content.box dt p{
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 20px 0 20px 5px;
+  line-height: 2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.list_content.box .list_item dd:nth-of-type(2){
+  display: block;
+  width: 50px;
+  padding: 3px;
+  background: #e71710;
+  border-radius: 20px;
+  color: #fff;
+  line-height: 1.6em;
+  font-weight: 500;
+  text-align: center;
+  font-size: .88em;
+  margin-bottom: 20px;
+}
+.list_content.box .list_item dd:nth-of-type(4){
+  color: #999;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+  font-size: .88em;
+}

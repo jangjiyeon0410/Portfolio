@@ -1,0 +1,244 @@
+<? session_start(); ?>
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>한국만화영상진흥원</title>
+
+    <link rel="apple-touch-icon-precomposed" href="./app_icon.png" />
+    <link rel="apple-touch-startup-image" href="./startup.png" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/swiper.css" />
+
+    <script src="./js/prefixfree.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/32507a69fa.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // <![CDATA[
+      try {
+        window.addEventListener(
+          "load",
+          function () {
+            setTimeout(scrollTo, 0, 0, 1);
+          },
+          false
+        );
+      } catch (e) {}
+      // ]]>
+    </script>
+  </head>
+
+  <body>
+    <? include "./common_header.html" ?>
+    <div class="main swiper-container swiper1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./images/main01x2.jpg" alt="" />
+          <div class="text_box">
+            <p><span>만화</span>로 행복할 수 있는 <span>세상</span></p>
+            <strong>한국만화영상진흥원</strong>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/main02x2.jpg" alt="" />
+          <div class="text_box">
+            <strong>문화강국,</strong>
+            <p><span>한국만화</span>가 선도하겠습니다</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/main03x2.jpg" alt="" />
+          <div class="text_box">
+            <p>만화창작의 <span>긍지를</span></p>
+            <strong>보여주는 허브로</strong>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination swiper-pagination1"></div>
+    </div>
+
+    <article id="content">
+      <h2 class="hidden">본문콘텐츠영역</h2>
+      <section class="business">
+        <h3>사업소개</h3>
+        <p>
+          <span>한국만화</span>의 <span>발전</span>을 위한 여러 사업을
+          진행합니다
+        </p>
+        <div class="swiper-container swiper2">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <a href="#"
+                ><img src="./images/business01x2.jpg" alt="" /><span
+                  >우수만화 콘텐츠 발굴</span
+                ></a
+              >
+            </li>
+            <li class="swiper-slide">
+              <a href="#"
+                ><img src="./images/business02x2.jpg" alt="" />
+                <span>창작 및 제작지원</span></a
+              >
+            </li>
+            <li class="swiper-slide">
+              <a href="#"
+                ><img src="./images/business03x2.jpg" alt="" /><span
+                  >만화인력 양성</span
+                ></a
+              >
+            </li>
+            <li class="swiper-slide">
+              <a href="#"
+                ><img src="./images/business04x2.jpg" alt="" /><span
+                  >창작 인프라 지원</span
+                ></a
+              >
+            </li>
+            <li class="swiper-slide">
+              <a href="#"
+                ><img src="./images/business05x2.jpg" alt="" /><span
+                  >만화문화 확산</span
+                ></a
+              >
+            </li>
+          </ul>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+      <section class="claster">
+        <h3>클래스터</h3>
+        <p>
+          <span>우리만화</span>의 가치와 꿈을 나눌 수 있는<br />
+          작가와 기업을 <span>지원</span>합니다.
+        </p>
+        <ul>
+          <li>
+            <a href="./sub3_1.html?num=1"
+              ><span></span>한국만화박물관<span
+                >더보기<i class="fa-solid fa-plus"></i></span
+            ></a>
+          </li>
+          <li>
+            <a href="./sub3_1.html?num=2"
+              ><span></span>웹툰스타트업캠퍼스<span
+                >더보기<i class="fa-solid fa-plus"></i></span
+            ></a>
+          </li>
+          <li>
+            <a href="./sub3_1.html?num=3"
+              ><span></span>만화창작스튜디오<span
+                >더보기<i class="fa-solid fa-plus"></i></span
+            ></a>
+          </li>
+        </ul>
+      </section>
+      <section class="toon">
+        <h3>CARTOON<span>&</span>WEBTOON</h3>
+        <p><span>좋아하실 만한 </span>만화를<br />모아봤어요!</p>
+        <div class="swiper-container swiper3">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <a href="./sub4_1.html?num=1">
+                <img src="./images/toon01x2.jpg" alt="웹툰 귀곡의문" />
+                <dl>
+                  <dt>&lt;귀곡의문&gt;</dt>
+                  <dd>삼촌</dd>
+                </dl>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="./sub4_1.html?num=2">
+                <img src="./images/toon02x2.jpg" alt="웹툰 물위의우리" />
+                <dl>
+                  <dt>&lt;물 위의 우리&gt;</dt>
+                  <dd>뱁새&왈패</dd>
+                </dl>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="./sub4_1.html?num=3">
+                <img src="./images/toon03x2.jpg" alt="웹툰 화산귀환" />
+                <dl>
+                  <dt>&lt;화산귀환&gt;</dt>
+                  <dd>LICO&비가</dd>
+                </dl>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="./sub4_1.html?num=4">
+                <img src="./images/toon04x2.jpg" alt="웹툰 도무지그애는" />
+                <dl>
+                  <dt>&lt;도무지 그 애는&gt;</dt>
+                  <dd>게코</dd>
+                </dl>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="./sub4_1.html?num=5">
+                <img src="./images/toon05x2.jpg" alt="웹툰 푸쉬오프" />
+                <dl>
+                  <dt>&lt;푸쉬오프&gt;</dt>
+                  <dd>허5파6</dd>
+                </dl>
+              </a>
+            </li>
+          </ul>
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </section>
+      <!-- <section class="helpdesk">
+          <h3>만화인 헬프데스크</h3>
+          <p>
+            <span>만화인 헬프데스크</span>는 만화분야 창작자 및 기업의 애로사항을 해소하기 위한 1:1 무료 상담 서비스입니다.
+          </p>
+          <div class="video_container"><iframe width="560" height="315" src="https://www.youtube.com/embed/v1-AGksa5uY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </section> -->
+      <section class="service">
+        <h3>QUICK MENU</h3>
+        <ul>
+          <li>
+            <a href="./sub1_4.html"><i class="fa-solid fa-car"></i>오시는길</a>
+          </li>
+          <li>
+            <a href="./sub4_2.html"
+              ><i class="fa-solid fa-circle-question"></i>FAQ</a
+            >
+          </li>
+        </ul>
+      </section>
+    </article>
+    <? include "./common_footer.html" ?>
+    <script src="./js/swiper.min.js"></script>
+    <script>
+      var swiper1 = new Swiper(".swiper1", {
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination1",
+          clickable: true,
+        },
+      });
+      var swiper2 = new Swiper(".swiper2", {
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+      var swiper = new Swiper(".swiper3", {
+        slidesPerView: 2.5,
+        spaceBetween: 15,
+        scrollbar: {
+          el: ".swiper-scrollbar",
+          hide: true,
+        },
+      });
+    </script>
+  </body>
+</html>

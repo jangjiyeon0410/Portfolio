@@ -1,0 +1,497 @@
+<? session_start(); ?>
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한국만화영상진흥원</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <link rel="stylesheet" href="./common/css/common.css" />
+    <link rel="stylesheet" href="./maincss/main.css" />
+
+    <script
+      src="https://kit.fontawesome.com/32507a69fa.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./common/js/prefixfree.min.js"></script>
+    <script src="./mainjs/mainpopup.js"></script>
+  </head>
+  <body>
+    <? include "./common/main_header.html" ?>
+    <div class="main">
+      <div class="gallery">
+        <ul>
+          <li class="link1">
+            <a href="#">
+              <img src="./images/visual_01.jpg" alt="" />
+              <object
+                class="line"
+                data="./images/visual_line.svg"
+                type="image/svg+xml"
+              ></object>
+              <dl>
+                <dt>
+                  <span>만화</span>로 행복할 수 있는 <span>세상</span><br />
+                  한국만화영상진흥원
+                </dt>
+                <dd>
+                  한국만화영상진흥원은 만화영상콘텐츠 산업의<br />중심기지로서
+                  한국만화의 가치증대를 위해 노력합니다.
+                </dd>
+              </dl>
+            </a>
+          </li>
+          <li class="link2">
+            <a href="#">
+              <img src="./images/visual_02.jpg" alt="" />
+              <dl>
+                <dt><span>문화강국,</span><br />한국만화가 선도하겠습니다.</dt>
+                <dd>
+                  한국만화영상진흥원은 글로벌 콘텐츠 시장에서의<br />한국 만화의
+                  가치를 실현합니다.
+                </dd>
+              </dl>
+            </a>
+          </li>
+          <li class="link3">
+            <a href="#">
+              <img src="./images/visual_03.jpg" alt="" />
+              <dl>
+                <dt>
+                  만화 창작의 <span>긍지</span>를<br />
+                  보여주는 허브로
+                </dt>
+                <dd>
+                  한국만화영상진흥원은 다채로운 한국만화를 위해<br />다양한 창작
+                  및 제작지원 프로그램을 진행합니다.
+                </dd>
+              </dl>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="dock">
+        <span class="mbutton btn1"></span>
+        <span class="mbutton btn2"></span>
+        <span class="mbutton btn3"></span>
+        <span class="ps"><i class="fa-solid fa-pause"></i></span>
+        <div class="left_right">
+          <span class="btn btnLeft"
+            ><i class="fa-solid fa-angle-left"></i
+          ></span>
+          <span class="btn btnRight"
+            ><i class="fa-solid fa-angle-right"></i
+          ></span>
+        </div>
+      </div>
+    </div>
+    <article id="content">
+      <h2 class="hidden">본문컨텐츠영역</h2>
+      <section class="business">
+        <span>KOM</span>
+        <span>ACON</span>
+        <h3 class="hidden">사업소개</h3>
+        <div class="business_inner">
+          <ul class="business_con1">
+            <li>
+              <img src="./images/business_01.jpg" alt="우수만화콘텐츠발굴" />
+            </li>
+            <li>
+              <dl>
+                <dt>우수만화 콘텐츠 발굴</dt>
+                <dd>
+                  대한민국창작만화공모전, 네이버웹툰최강자전, 오늘의우리만화상,
+                  만화평론공모전, 전국학생만화공모전, 부천만화대상,
+                  한중일신인만화가콘테스트 등 우수만화 컨텐츠 발굴을 위해 다양한
+                  공모전을 진행합니다.
+                </dd>
+              </dl>
+            </li>
+          </ul>
+          <ul class="business_con2">
+            <li><img src="./images/business_02.jpg" alt="" /></li>
+            <li>
+              <dl>
+                <dt>창작 및 제작 지원</dt>
+                <dd>
+                  다양성만화 제작 지원, 창작 초기단계 지원, 만화 독립 출판 지원,
+                  만화 콘텐츠 다각화 지원, 수출작품 번역 지원 등 한국만화의
+                  자유로운 창작과 제작을 위해 다양한 지원사업을 진행합니다.
+                </dd>
+              </dl>
+            </li>
+          </ul>
+          <ul class="business_con3">
+            <li><img src="./images/business_03.jpg" alt="" /></li>
+            <li>
+              <dl>
+                <dt>만화 인력 양성</dt>
+                <dd>
+                  K-Comics 아카데미 운영, 청년장애인 웹툰 아카데미 운영, 웹툰
+                  시니어 멘토링을 통해 만화 인력을 양성하고, 지원합니다.
+                </dd>
+              </dl>
+            </li>
+          </ul>
+          <ul class="business_con4">
+            <li><img src="./images/business_04.jpg" alt="" /></li>
+            <li>
+              <dl>
+                <dt>창작 인프라 지원</dt>
+                <dd>
+                  1인 창조기업 지원,만화인 헬프데스크 운영,
+                  웹툰창작체험관·지역웹툰캠퍼스 조성 및 운영을 통해 웹툰산업의
+                  지역 확대 및 불균형 해소를 위한 만화문화 거점 인프라 시설이
+                  전국 방방곡곡 조성 및 운영될 수 있도록 지원합니다.
+                </dd>
+              </dl>
+            </li>
+          </ul>
+          <ul class="business_con5">
+            <li><img src="./images/business_05.jpg" alt="" /></li>
+            <li>
+              <dl>
+                <dt>만화문화 확산</dt>
+                <dd>
+                  부천국제만화축제(BICOF), 경기국제코스프레페스티벌의 개최와
+                  한국만화박물관 운영, 디지털만화규장각 운영 및 웹툰 아카이브
+                  구축, 만화영상콘텐츠산업 클러스터 운영 및 웹툰융합센터
+                  건립,국제만화가대회(ICC) 사무국 운영, 한국만화 해외전시 및
+                  만화교류 등을 통해 만화문화 확산을 도모합니다.
+                </dd>
+              </dl>
+            </li>
+          </ul>
+        </div>
+        <a class="more" href="./sub2/sub_2_1.html"
+          >MORE VIEW<i class="fa-solid fa-arrow-right-long"></i
+        ></a>
+        <div class="move">
+          <a class="leftBtn" href="#"><i class="fa-solid fa-angle-left"></i></a>
+          <span class="num">
+            <strong>1</strong>
+            <span>/ 5</span>
+          </span>
+          <a class="RightBtn" href="#"
+            ><i class="fa-solid fa-angle-right"></i
+          ></a>
+        </div>
+      </section>
+      <section class="claster">
+        <div class="claster_text">
+          <h3>클래스터</h3>
+          <p>
+            <span>우리만화</span>의 가치와 꿈을 나눌 수 있는 작가와 기업을
+            지원합니다.
+          </p>
+          <p>
+            창작활동에 전념할 수 있도록 일정기간 동안 작업공간을 지원하고<br />홍보,
+            비즈니스 교육, 공공 프로젝트 수행 지원 등 다양한 프로그램을
+            제공합니다.
+          </p>
+        </div>
+        <ul>
+          <li>
+            <img src="./images/claster_01.png" alt="" /><span
+              >한국만화박물관</span
+            >
+          </li>
+          <li>
+            <img src="./images/claster_02.png" alt="" /><span
+              >웹툰스타트업캠퍼스</span
+            >
+          </li>
+          <li>
+            <img src="./images/claster_03.png" alt="" /><span
+              >부천만화창작스튜디오</span
+            >
+          </li>
+          <li>
+            <img src="./images/claster_04.png" alt="" /><span
+              >도당어울마당</span
+            >
+          </li>
+          <li>
+            <img src="./images/claster_05.png" alt="" /><span
+              >소새울어울마당</span
+            >
+          </li>
+        </ul>
+        <a class="more" href="./sub4/sub_4_1.html"
+          >MORE VIEW<i class="fa-solid fa-arrow-right-long"></i
+        ></a>
+      </section>
+      <section class="helpdesk">
+        <h3>만화인<span>헬프데스크</span></h3>
+        <p>
+          만화인 헬프데스크는 만화분야 창작자 및 기업의 애로사항을 해소하기 위한
+          1:1 무료 상담 서비스입니다.
+        </p>
+        <div class="slide_video_box">
+          <div class="slide_video">
+            <ul>
+              <li>
+                <a href="./sub5/sub_5_2.html?num=1">
+                  <div class="image">
+                    <img
+                      src="./images/helpdesk_03.jpg"
+                      alt="상담신청 안내 동영상 "
+                    />
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="./sub5/sub_5_2.html?num=2">
+                  <div class="image">
+                    <img src="./images/helpdesk_02.jpg" alt="소개 동영상" />
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="./sub5/sub_5_2.html?num=3">
+                  <div class="image">
+                    <img
+                      src="./images/helpdesk_06.jpeg"
+                      alt="종합소득세 안내 동영상"
+                    />
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="./sub5/sub_5_2.html?num=4">
+                  <div class="image">
+                    <img
+                      src="./images/helpdesk_01.jpg"
+                      alt="상표법 안내 동영상"
+                    />
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="./sub5/sub_5_2.html?num=5">
+                  <div class="image">
+                    <img
+                      src="./images/helpdesk_05.jpg"
+                      alt="저작권 안내 동영상"
+                    /></div
+                ></a>
+              </li>
+              <li>
+                <a href="./sub5/sub_5_2.html?num=6"
+                  ><div class="image">
+                    <img
+                      src="./images/helpdesk_04.jpg"
+                      alt="이용가이드 안내 동영상"
+                    /></div
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="left_right_box">
+            <a href="#" class="m1 button"
+              ><i class="fa-solid fa-angle-left"></i
+              ><span class="hidden">이전</span></a
+            >
+            <a href="#" class="m2 button"
+              ><i class="fa-solid fa-angle-right"></i
+              ><span class="hidden">다음</span></a
+            >
+          </div>
+        </div>
+
+        <a class="more" href="./sub5/sub_5_1.html"
+          >MORE VIEW<i class="fa-solid fa-arrow-right-long"></i
+        ></a>
+      </section>
+      <? include "./lib/func.php"; ?>
+      <section class="toon">
+        <h3>CARTOON<span>&#38;</span>WEBTOON</h3>
+        <p>이 달의 추천만화를 지금 만나보세요.</p>
+        <ul>
+        <? latest_article(toon, 5, 40, 60); ?>
+          <!-- <li>
+            <a href="#">
+              <dl>
+                <dt>&#8249; 물 위의 우리 &#8250;</dt>
+                <dd> <img src="./images/toon_02.jpg" alt="웹툰 물위의 우리" /></dd>
+              </dl>
+             
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <dl>
+                <dt>&#8249; 귀곡의 문 &#8250;</dt>
+                <dd> <img src="./images/toon_01.jpg" alt="웹툰 귀곡의 문" /></dd>
+              </dl>
+             
+            </a>
+          </li>
+         
+          <li>
+            <a href="#">
+              <dl>
+                <dt>&#8249; 화산귀환 &#8250;</dt>
+                <dd>LICO&비가 / 네이버웹툰</dd>
+              </dl>
+              <img src="./images/toon_03.jpg" alt="웹툰 화산귀환" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <dl>
+                <dt>&#8249; 도무지 그 애는 &#8250;</dt>
+                <dd>게코 / 네이버웹툰</dd>
+              </dl>
+              <img src="./images/toon_04.jpg" alt="웹툰 도무지 그 애는" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <dl>
+                <dt>&#8249; 푸쉬오프 &#8250;</dt>
+                <dd>허5파6 / 네이버웹툰</dd>
+              </dl>
+              <img src="./images/toon_05.jpg" alt="웹툰 푸쉬오프" />
+            </a>
+          </li> -->
+        </ul>
+        <a class="more" href="./toon/list.php"
+          >MORE VIEW<i class="fa-solid fa-arrow-right-long"></i
+        ></a>
+      </section>
+      <section class="notice">
+        <h3>공지사항</h3>
+        <ul class="notice_inner">
+          <li><img src="./images/notice.jpg" alt="" /></li>
+          <? latest_article(greet, 4, 40, 60); ?>
+          <!-- <li>
+            <span>공지</span>
+            <a href="#">
+              <dl>
+                <dt>제23회 전국학생만화 공모전 공모요강</dt>
+                <dd>
+                제 23회 전국학생만화 공모전을 개최합니다. 전국 중·고등학교
+                재학생 또는 동일연령 청소년(검정고시 합격생 포함) 를 대상으로
+                자유주제의 웹툰, 카툰...
+                </dd>
+                <dd>2022.07.08</dd>
+              </dl>
+            </a>
+          </li>
+          <li>
+            <span>모집</span>
+            <a href="#">
+              <dl>
+                <dt>2022 한국만화영상진흥원 신규입주자 모집공고</dt>
+                <dd>
+                  한국만화영상진흥원에서는 비즈니스센터 입주시설의
+                  입주희망자를입주시설의...
+                </dd>
+                <dd>2022.07.08</dd>
+              </dl>
+            </a>
+          </li>
+          <li>
+            <span>결과</span>
+            <a href="#">
+              <dl>
+                <dt>2022 한국만화영상진흥원 입주계약 연장평가 결과 공고</dt>
+                <dd>
+                  한국만화영상진흥원에서는 비즈니스센터 입주시설의
+                  입주희망자를입주시설의...
+                </dd>
+              </dl>
+            </a>
+          </li>
+          <li>
+            <span>공지</span>
+            <a href="#">
+              <dl>
+                <dt>제20회 대한민국창작만화공모전 공모요강</dt>
+                <dd>
+                  한국만화영상진흥원에서는 비즈니스센터 입주시설의
+                  입주희망자를입주시설의...
+                </dd>
+              </dl>
+            </a>
+          </li> -->
+        </ul>
+        <a
+          class="more"
+          href="./notice/list.php">MORE VIEW<i class="fa-solid fa-arrow-right-long"></i></a>
+      </section>
+      <ul class="banner_list">
+        <li>
+          <a href="#">한국만화규장각</a>
+        </li>
+        <li>
+          <a href="#">한국만화박물관</a>
+        </li>
+        <li>
+          <a href="#">K-Comics아카데미</a>
+        </li>
+        <li>
+          <a href="#">International Comic Artist Conference</a>
+        </li>
+        <li>
+          <a href="#">BICOF</a>
+        </li>
+        <li>
+          <a href="#">YCAC CONTEST</a>
+        </li>
+      </ul>
+    </article>
+    <? include "./common/main_footer.html" ?>
+
+    <script src="./mainjs/main.js"></script>
+    <script src="./mainjs/move.js"></script>
+    <script src="./mainjs/mainpopup.js"></script>
+
+    <!--공지팝업-->
+    <div
+      id="showimage"
+      style="
+        z-index: 0;
+        position: absolute;
+        width: 320px;
+        right: 100px;
+        bottom: 100px;
+      "
+    >
+      <script>
+        function closeWin() {
+          var chk = document.getElementById("Notice");
+          if (chk.checked) {
+            setCookie("Notice", "done", 1); //1이란 숫자는 1일간 안보임을 뜻합니다. 날짜는 자신에 맞게 수정하세요
+          }
+        }
+        if (getCookie("Notice") == "done") {
+          hidebox();
+        }
+      </script>
+      <div>
+        <img
+          src="./popup/pop.png"
+          alt="본 사이트는 상업적 목적이 아닌 개인 포트폴리오 용도로 만들어졌습니다. 홈페이지의 일부 내용과 기타 이미지 등은 그 출처가 따로 있음을 밝힙니다."
+        />
+      </div>
+      <div style="font-size: 12px; text-align: center; color: #666">
+        <input
+          type="checkbox"
+          name="Notice"
+          id="Notice"
+          value=""
+          title="오늘은 이창을 열지 않음 선택상자"
+        /><label for="Notice">오늘은 이창을 열지 않음.</label>
+        <a href="#" onclick="closeWin();hidebox();return false;"> [close] </a>
+      </div>
+    </div>
+  </body>
+</html>

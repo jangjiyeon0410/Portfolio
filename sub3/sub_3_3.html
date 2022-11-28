@@ -1,0 +1,69 @@
+<? session_start(); ?>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>대관안내-대관현황</title>
+    <link rel="stylesheet" href="../common/css/common.css" />
+    <link rel="stylesheet" href="../common/css/sub_common.css" />
+    <link rel="stylesheet" href="./common/css/sub3_common.css" />
+    <link rel="stylesheet" href="./css/sub3_content3.css" />
+    <link rel="stylesheet" href="./css/sub3_content3_calendar.min.css" />
+
+    <script
+      src="https://kit.fontawesome.com/32507a69fa.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/common/js/prefixfree.min.js"></script>
+  </head>
+  <body>
+    <? include "../common/sub_header.html" ?>
+    <div class="main">
+      <img src="./common/images/main.jpg" alt="" />
+      <h3>대관안내</h3>
+      <span>FACILITY</span>
+    </div>
+    <div class="subNav">
+      <ul>
+        <li>
+          <a href="./sub_3_1.html"
+            >시설안내<i class="fas fa-circle-notch"></i
+          ></a>
+        </li>
+        <li>
+          <a href="./sub_3_2.html"
+            >이용안내<i class="fas fa-circle-notch"></i
+          ></a>
+        </li>
+        <li>
+          <a class="current" href="./sub_3_3.html"
+            >대관현황<i class="fas fa-circle-notch"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+    <article id="content">
+      <div class="titleArea">
+        <div class="lineMap">
+          <a href="../index.html"><i class="fas fa-house"></i></a>
+          <i class="fa-solid fa-angle-right"></i>
+          <a href="./sub_3_1.html"><span>대관안내</span></a>
+          <i class="fa-solid fa-angle-right"></i>
+          <a href="./sub_3_3.html"><span>대관현황</span></a>
+        </div>
+        <h2>대관현황</h2>
+      </div>
+      <div class="contentArea">
+        <img src="./images/content3/wave.png" alt="" />
+        <div id="calendar"></div>
+        <img src="./images/content3/wave_2.png" alt="" />
+      </div>
+    </article>
+    <? include "../common/sub_footer.html" ?>
+
+    <script src="./js/sub3_content3_calendar.min.js"></script>
+    <script src="./js/sub3_content3.js"></script>
+  </body>
+</html>

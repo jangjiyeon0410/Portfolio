@@ -1,0 +1,147 @@
+@keyframes back{
+  from{transform: translateY(200px); opacity:0;}
+  to{transform:translateY(0); opacity:1;}
+}
+
+
+
+.text {
+  position: fixed;
+  right: 0;
+  top: 500px;
+  font-size: 50px;
+  z-index: 100;
+}
+
+.contentArea {
+  width: 1200px;
+  margin: 0 auto 200px auto;
+  line-height: 2em;
+  position: relative;
+}
+
+/* 탭박스 */
+.navBox ul li a.spy {
+  color: #fff;
+  opacity: 1;
+  background: #e71e10;
+}
+.navOn {
+  position: fixed;
+  width: 100%;
+  height: 120px;
+  left: 0;
+  top: 0;
+  background: #fff;
+  border-radius: 0 0 50px 50px;
+  box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 10%);
+  z-index: 60;
+}
+.navBox .innerSubNav {
+  width: 1200px;
+  margin: 0 auto 50px;
+}
+
+.contentArea .slideMenu {
+  overflow: hidden;
+  margin-left: 100px;
+  padding: 30px 0;
+}
+.contentArea .slideMenu li {
+  float: left;
+}
+.contentArea .slideMenu li a {
+  float: left;
+  font-size: 1.25em;
+  font-weight: 500;
+  transition: all 0.3s;
+  opacity: 0.6;
+  text-align: center;
+  width: 300px;
+  height: 60px;
+  box-shadow: 2px 2px 20px 0 rgba(0, 0, 0, 10%);
+  padding-top: 12px;
+  margin: 0 15px;
+  border-radius: 30px;
+}
+
+.contentArea li:hover a {
+  opacity: 1;
+}
+
+section {
+  position: relative;
+  overflow: hidden;
+}
+section h3 {
+  display: none;
+}
+section::after {
+  content: "";
+  height: 2270px;
+  border-right: 5px dotted #ccc;
+  position: absolute;
+  top: 65px;
+  left: 415.5px;
+}
+section:nth-of-type(2)::after {
+  top: 165px;
+  height: 1550px;
+}
+section:nth-of-type(3)::after {
+  height: 400px;
+  top: 165px;
+}
+.contentArea::after {
+  content: "KOMACON HISTORY";
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 31em;
+  color: #f8f8f8;
+  position: absolute;
+  top: 200px;
+  right: 300px;
+  z-index: -1;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+.contentArea section:nth-of-type(2) {
+  border-top: 3px solid #f4f4f4;
+  border-bottom: 3px solid #f4f4f4;
+  padding: 100px 0;
+  margin-top: 100px;
+}
+.contentArea section:nth-of-type(3) {
+  padding-top: 100px;
+}
+section dl {
+  overflow: hidden;
+  margin: 50px 0 50px 260px;
+  padding-left: 250px;
+  position: relative;
+}
+section dt {
+  float: left;
+  margin-left: -250px;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #e71e10;
+}
+section dt::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 5px solid #e71e10;
+  position: absolute;
+  top: 8px;
+  left: 148px;
+  z-index: 1;
+  transition: all 0.5s;
+}
+section dl:hover dt::after {
+  background: #e71e10;
+}
+section dd strong {
+  margin-right: 20px;
+}

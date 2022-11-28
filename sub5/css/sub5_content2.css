@@ -1,0 +1,133 @@
+@keyframes top {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes left {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.main_video iframe.scroll_move,
+.contentArea .youtube.scroll_move li,
+.contentArea > a.scroll_move {
+  animation: top 1.3s forwards;
+}
+.contentArea .youtube.scroll_move li:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+.contentArea .youtube.scroll_move li:nth-of-type(3) {
+  animation-delay: 0.4s;
+}
+.contentArea .youtube.scroll_move li:nth-of-type(4) {
+  animation-delay: 0.6s;
+}
+.contentArea .youtube.scroll_move li:nth-of-type(5) {
+  animation-delay: 0.8s;
+}
+.contentArea .youtube.scroll_move li:nth-of-type(6) {
+  animation-delay: 1s;
+}
+.contentArea > a,
+.main_video iframe,
+.youtube li {
+  opacity: 0;
+}
+
+.contentArea {
+  width: 1920px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.contentArea > span {
+  display: block;
+  font-size: 1.5em;
+  margin-bottom: 50px;
+  font-weight: 500;
+  position: relative;
+}
+.contentArea > span::after {
+  content: "";
+  width: 350px;
+  height: 3px;
+  background: #e71e10;
+  position: absolute;
+  top: 40px;
+  left: 825px;
+}
+.main_video {
+  margin-top: -100px;
+  padding: 150px 0 100px;
+  background: #f8f8f8;
+}
+.main_video img {
+  position: absolute;
+  top: -30px;
+  left: 0;
+}
+.main_video img:nth-of-type(2) {
+  position: absolute;
+  top: 780px;
+  left: 0;
+}
+.contentArea iframe {
+  width: 900px;
+  height: 550px;
+  border-radius: 30px;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 10%);
+}
+.contentArea ul {
+  overflow: hidden;
+  margin: 50px 0 0 100px;
+  padding: 10px 10px 100px 10px;
+}
+.contentArea li {
+  float: left;
+  width: 250px;
+  height: 200px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 10%);
+  margin: 0 15px;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+.contentArea li:hover {
+  transform: scale(1.07);
+}
+.contentArea li img {
+  width: 250px;
+  border-radius: 20px 20px 0 0;
+}
+.contentArea li span {
+  display: block;
+  padding-top: 20px;
+}
+.contentArea > a {
+  display: inline-block;
+  width: 350px;
+  height: 60px;
+  border-radius: 30px;
+  border: 1px solid #e71e10;
+  padding: 20px 0;
+  font-weight: 500;
+  margin-bottom: 200px;
+  transition: all 0.5s;
+}
+.contentArea > a:hover {
+  background: #e71e10;
+  color: #fff;
+}

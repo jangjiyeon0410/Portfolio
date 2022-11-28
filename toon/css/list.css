@@ -1,0 +1,306 @@
+/* 목록 리스트형 컨텐츠 */
+.list_content.list {
+  border-top: 2px solid #eee;
+}
+.list_content.list li {
+  border-bottom: 2px solid #eee;
+  height: 300px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.list_content.list li a {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.125em;
+  overflow: hidden;
+  padding: 20px 0;
+}
+.list_content.list li a div {
+  overflow: hidden;
+}
+.list_content.list li a img {
+  width: 400px;
+  height: 260px;
+  object-fit: cover;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  transition: all 0.3s;
+  object-position: center;
+}
+.list_content.list li dl {
+  margin-top: 15px;
+  width: 720px;
+}
+.list_content.list li dl dt {
+  font-weight: 500;
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+.list_content li dl dd:nth-of-type(1) {
+  display: block;
+  width: 50px;
+  padding: 3px;
+  background: #e71710;
+  border-radius: 20px;
+  color: #fff;
+  line-height: 1.6em;
+  font-weight: 500;
+  text-align: center;
+  font-size: 0.88rem;
+  margin-bottom: 10px;
+}
+.list_content.list li dl dd:nth-of-type(2) {
+  margin: 15px 0;
+  line-height: 2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  font-size: 1rem;
+  text-align: justify;
+}
+.list_content.list li dl dd:nth-of-type(3) span {
+  display: inline-block;
+  margin-right: 15px;
+  color: #999;
+  font-size: 0.88em;
+}
+.list_content li dl dd span i i {
+  text-indent: -999px;
+  font-size: 0;
+}
+.list_content.list li:hover {
+  background: #f8f8f8;
+}
+.list_content.list li:hover a img {
+  transform: scale(1.07);
+}
+
+/* 박스형 리스트 */
+
+.list_content.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.list_content.box .list_item {
+  width: 31%;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  margin: 10px 1%;
+  transition: all 0.3s;
+}
+
+.list_content.box dt {
+  font-size: 1.25em;
+  font-weight: 500;
+  transition: all 0.3s;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  display: block;
+  line-height: 1.5em;
+}
+.list_content.box li a div {
+  height: 350px;
+  overflow: hidden;
+}
+.list_content.box li a div img:hover {
+  transform: scale(1.07);
+}
+.list_content.box li a div img {
+  height: 350px;
+  width: 320px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  transition: all 0.3s;
+}
+.list_content.box li dl dd:nth-of-type(1) {
+  margin: 15px 0 10px;
+}
+.list_content.box .list_item dd:nth-of-type(2) {
+  font-size: 0.88em;
+  margin: 15px 0;
+  line-height: 2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  text-align: justify;
+}
+.list_content.box .list_item dd:nth-of-type(3) span {
+  display: inline-block;
+  margin-right: 15px;
+  color: #999;
+  font-size: 0.88em;
+}
+
+tl {
+  border-top: 1px solid #999;
+}
+.photo_bbs_wrap .bbs_view_ttl li {
+  border-bottom: 1px solid #ddd;
+  padding: 20px;
+}
+.photo_bbs_wrap .bbs_view_ttl li:first-child {
+  background: #f2f2f2;
+  font-weight: 700;
+}
+.photo_bbs_wrap .bbs_view_ttl li span {
+  display: inline-block;
+  color: #888;
+}
+.photo_bbs_wrap .bbs_view_ttl li span + span::before {
+  content: "/";
+  display: inline-block;
+  padding: 0 10px;
+  color: #ddd;
+}
+.photo_bbs_wrap .bbs_view_ttl li span i {
+  font-size: 0.75rem;
+  padding-right: 2px;
+}
+.photo_bbs_wrap .bbs_view_ttl li span i i {
+  font-size: 0;
+  text-indent: -9999%;
+}
+
+.photo_bbs_wrap .bbs_view_cont {
+  min-height: 200px;
+  padding: 20px;
+  overflow: hidden;
+}
+.photo_bbs_wrap .bbs_view_cont .img {
+  text-align: center;
+  margin: 0 0 20px;
+}
+.photo_bbs_wrap .bbs_view_cont img {
+  max-width: 100%;
+}
+.photo_bbs_wrap .bbs_view_cont::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.photo_bbs_wrap .bbs_view_cont + .btn_wrap {
+  border-top: 1px solid #ddd;
+  padding: 20px 0 0;
+}
+
+/******************************** comment **********************************/
+.comment_wrap {
+  background: #f8f8f8;
+  border-radius: 20px;
+}
+.comment_wrap .commnet_list li {
+  position: relative;
+  padding: 30px;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+.comment_wrap .commnet_list li:last-child {
+  margin-bottom: none;
+  border-bottom: 2px solid #eee;
+}
+.comment_wrap .commnet_list li:first-child:hover{
+  border-radius: 20px 20px 0 0 ;
+}
+.comment_wrap .commnet_list li:hover {
+  background: #ddd;
+  border-radius:none ;
+}
+
+.comment_wrap .commnet_list li dl dt {
+  color: #333;
+  font-weight: 500;
+}
+.comment_wrap .commnet_list li dl dt span {
+  display: inline-block;
+  font-weight: 400;
+  margin-left: 10px;
+  font-size: 0.88em;
+  color: #999;
+}
+.comment_wrap .commnet_list li dl dd {
+  margin-top: 20px;
+}
+.comment_wrap .commnet_list li dl dd .comment_modify{
+  display: none;
+}
+.comment_wrap .commnet_list li .modify_button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.comment_wrap .commnet_list li .modify_button a {
+  display: inline-block;
+  padding: 0 5px;
+  color: #999;
+  transition: all 0.3s;
+}
+.comment_wrap .commnet_list li .modify_button a:hover {
+  color: #e71e10;
+}
+.comment_wrap .commnet_list li .modify_button i i {
+  font-size: 0;
+  text-indent: -9999px;
+}
+.ripple_input {
+  background: #f8f8f8;
+  padding: 30px 20px;
+  overflow: hidden;
+  border-radius: 0 0 20px 20px;
+}
+.ripple_input li:nth-child(1) {
+  width: 90%;
+  float: left;
+}
+.ripple_input li:nth-child(2) {
+  width: 8%;
+  float: right;
+}
+.ripple_input li textarea, .comment_modify textarea {
+  width: 100%;
+  height: 80px;
+  resize: none;
+  font-family: "Noto Sans KR", sans-serif;
+  overflow: hidden;
+  border: none;
+}
+.ripple_input li a, .comment_modify a {
+  display: block;
+  padding: 30px;
+  background: #e71710;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+/* modify */
+.comment_modify{
+  width: 98%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.comment_modify form{
+  overflow: hidden;
+}
+.comment_modify textarea {
+  float: left;
+  width: 92%;
+  height: 60px;
+}
+.comment_modify a {
+  float: right;
+  padding: 20px;
+  width: 7%;
+  text-align: center;
+  background: #aaa;
+}

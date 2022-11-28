@@ -1,0 +1,67 @@
+
+/* 목록 박스형 컨텐츠 */
+
+.list_content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.list_content .list_item{
+  width: 31%;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+  margin: 10px 1%;
+  transition: all .3s;
+}
+
+.list_content .list_item:hover dt span{
+  color: #e71e10;
+}
+.list_content dt span{
+  font-size: 1.125em;
+  font-weight: 500;
+  transition: all .3s;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  display: block;
+  line-height: 1.5em;
+}
+.list_content dt img:hover{
+  transform: scale(1.1);
+}
+.list_content dt div{
+  height: 200px;
+  overflow: hidden;
+}
+.list_content dt img{
+  width: 100%;
+  margin-bottom: 10px;
+  vertical-align: middle;
+  transition: all .3s;
+}
+.list_content .list_item dd{
+  color: #999;
+  font-size: .88em;
+  padding-top: 15px;
+}
+.list_content .list_item dd span{
+  display: inline-block;
+  margin-right: 10px;
+}
+.list_content dl dd span:nth-child(3) i i{
+  text-indent: -999px;
+  font-size: 0;
+}
+
+/* modify */
+.delete_ok{
+  display: flex;
+  margin-top: 10px;
+  color: #666;
+}
+.delete_ok span{
+  display: block;
+  margin: 5px 10px 0 10px;
+  font-size: .88em;
+}
