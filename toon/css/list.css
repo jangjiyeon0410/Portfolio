@@ -34,12 +34,12 @@
   margin-top: 15px;
   width: 720px;
 }
-.list_content.list li dl dt {
+.list_content.list li dl dd:nth-of-type(1) {
   font-weight: 500;
   font-size: 1.25em;
   line-height: 1.5em;
 }
-.list_content li dl dd:nth-of-type(1) {
+.list_content li dl dt {
   display: block;
   width: 50px;
   padding: 3px;
@@ -96,7 +96,7 @@
   transition: all 0.3s;
 }
 
-.list_content.box dt {
+.list_content.box dd:nth-of-type(1) {
   font-size: 1.25em;
   font-weight: 500;
   transition: all 0.3s;
@@ -119,7 +119,7 @@
   margin-bottom: 10px;
   transition: all 0.3s;
 }
-.list_content.box li dl dd:nth-of-type(1) {
+.list_content.box li dl dt {
   margin: 15px 0 10px;
 }
 .list_content.box .list_item dd:nth-of-type(2) {
@@ -205,7 +205,7 @@ tl {
   overflow: hidden;
 }
 .comment_wrap .commnet_list li:last-child {
-  margin-bottom: none;
+  margin-bottom: 0;
   border-bottom: 2px solid #eee;
 }
 .comment_wrap .commnet_list li:first-child:hover{
@@ -213,7 +213,7 @@ tl {
 }
 .comment_wrap .commnet_list li:hover {
   background: #ddd;
-  border-radius:none ;
+  border-radius:0 ;
 }
 
 .comment_wrap .commnet_list li dl dt {

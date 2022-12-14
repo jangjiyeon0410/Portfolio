@@ -1,3 +1,5 @@
+/* scroll animaion */
+
 @keyframes top{
   from{transform: translateY(50px); opacity:0;}
   to{transform:translateY(0); opacity:1;}
@@ -7,18 +9,16 @@
   to{transform:translateX(0); opacity:1;}
 }
 
-
-/* scroll event */
 .contentArea h3.scroll_move, .contentArea p.scroll_move, section h3.scroll_move, section .tab_menu.scroll_move, .contlist.scroll_move  ul{
   animation: top 1s forwards;
 }
-
 
 /* opacity */
 .contentArea h3, .contentArea p, section h3, section .tab_menu, section .contlist ul{
   opacity: 0;
 }
 
+/* content */
 
 #content {
   width: 100%;

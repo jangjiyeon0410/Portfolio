@@ -25,13 +25,13 @@
   background: #f9f9f9
 }
 
+.list_content.list dl dt{
+  width: 10%;
+}
 .list_content.list dl dd:nth-of-type(1) {
   width: 10%;
 }
-.list_content.list dl dd:nth-of-type(2) {
-  width: 10%;
-}
-.list_content.list dl dt{
+.list_content.list dl dd:nth-of-type(2){
   width: 40%;
   text-align: left;
   margin-left: 5%;
@@ -45,7 +45,7 @@
 .list_content.list dl dd:nth-of-type(5){
   width: 10%;
 }
-.list_content.list .list_item dt p{
+.list_content.list .list_item dd:nth-of-type(2) p{
   display: none;
 }
 
@@ -53,7 +53,7 @@
 /* 목록 박스형 컨텐츠 */
 
 .list_content.box .list_title,  
-.list_content.box .list_item dd:nth-of-type(1),
+.list_content.box .list_item dt,
 .list_content.box .list_item dd:nth-of-type(3),
 .list_content.box .list_item dd:nth-of-type(5){
   display: none;
@@ -74,12 +74,12 @@
 .list_content.box .list_item:hover{
   border: 1px solid #e71e10;
 }
-.list_content.box dt a{
+.list_content.box dd:nth-of-type(2) a{
   font-size: 1.25em;
   font-weight: 500;
   margin-left: 5px;
 }
-.list_content.box dt p{
+.list_content.box dd:nth-of-type(2) p{
   font-size: 1rem;
   font-weight: 400;
   margin: 20px 0 20px 5px;
@@ -90,7 +90,7 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
 }
-.list_content.box .list_item dd:nth-of-type(2){
+.list_content.box .list_item dd:nth-of-type(1){
   display: block;
   width: 50px;
   padding: 3px;

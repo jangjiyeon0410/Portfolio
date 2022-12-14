@@ -1,3 +1,5 @@
+/* scroll animaion */
+
 @keyframes top {
   from {
     transform: translateY(50px);
@@ -44,6 +46,8 @@
 .youtube li {
   opacity: 0;
 }
+
+/* content */
 
 .contentArea {
   width: 1920px;

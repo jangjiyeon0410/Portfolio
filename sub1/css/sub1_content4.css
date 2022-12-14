@@ -1,4 +1,4 @@
-/* CI소개 본문 영역 */
+/* scroll animation */
 @keyframes top{
     from{transform: translateY(60px); opacity:0;}
     to{transform:translateY(0); opacity:1;}
@@ -23,6 +23,10 @@
 .main_grid, .contentArea p, .contentArea ul li{
     opacity: 0;
 }
+
+
+/* content */
+
 
 #content{
     position: relative;

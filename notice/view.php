@@ -1,9 +1,6 @@
 <? 
 	session_start(); 
 
-	// $num=1 => db에 저장된 진짜 게시글번호
-	// $page / $scale
-
 	@extract($_GET); 
 	@extract($_POST); 
 	@extract($_SESSION); 
@@ -14,7 +11,6 @@
 	$result = mysql_query($sql, $connect);
 
     $row = mysql_fetch_array($result);       
-      // 하나의 레코드 가져오기
 	
 	$item_num     = $row[num];
 	$item_id      = $row[id];
@@ -22,15 +18,6 @@
   	$item_nick    = $row[nick];
   	$item_cat    = $row[cat];
 	$item_hit     = $row[hit];
-
-	
-	$image_name[0]   = $row[file_name_0];
-	$image_name[1]   = $row[file_name_1];
-	$image_name[2]   = $row[file_name_2];
-
-	$image_copied[0] = $row[file_copied_0];
-	$image_copied[1] = $row[file_copied_1];
-	$image_copied[2] = $row[file_copied_2];
 
     $item_date    = $row[regist_day];
 
@@ -47,7 +34,7 @@
 
 	$new_hit = $item_hit + 1;
 
-	$sql = "update greet set hit=$new_hit where num=$num";   // 글 조회수 증가시킴
+	$sql = "update greet set hit=$new_hit where num=$num";
 	mysql_query($sql, $connect);
 ?>
 <!DOCTYPE html>
@@ -57,15 +44,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>고객지원 - 공지사항</title>
-    <link rel="stylesheet" href="../common/css/common.css" />
-    <link rel="stylesheet" href="../common/css/sub_common.css" />
-    <link rel="stylesheet" href="../common/css/sub6_common.css" />
-    <link rel="stylesheet" href="./css/list.css" />
+    <link rel="stylesheet" href="../common/css/common.css">
+    <link rel="stylesheet" href="../common/css/sub_common.css">
+    <link rel="stylesheet" href="../common/css/sub6_common.css">
+    <link rel="stylesheet" href="./css/list.css">
 	<script src="https://kit.fontawesome.com/cdd59ed73b.js" crossorigin="anonymous"></script>
     <script src="../common/js/prefixfree.min.js"></script>
 	<script>
 		function del(href) 	
-		//매개변수로 'delete.php?num=<?=$num?>' 넘김 (page, scale 같이 넘기든가~)
 		{
 			if(confirm("한번 삭제한 자료는 복구할 방법이 없습니다.\n\n정말 삭제하시겠습니까?")) {
 					document.location.href = href;
@@ -77,7 +63,7 @@
 	<body>
 		<? include "../common/sub_header.html" ?>
 		<div class="main">
-			<img src="./images/sub6_main.jpg" alt="" />
+			<img src="./images/sub6_main.jpg" alt="">
 			<h3>공지사항</h3>
 			<span>NOTICE</span>
 		</div>
@@ -127,7 +113,6 @@
 					<a href="list.php?page=<?=$page?>&listtype=<?=$listtype?>">목록</a>
 					<? 
 						if($userid==$item_id || $userlevel==1 || $userid=="admin")
-						// 로그인된 아이디 == 글쓴이 이거나 최고 관리자면 참
 						{
 					?>
 					<a href="modify_form.php?num=<?=$num?>&page=<?=$page?>&listtype=<?=$listtype?>">수정</a>
@@ -136,7 +121,7 @@
 						}
 					?>
 					<? 
-						if($userid)  //로그인이 되면 글쓰기
+						if($userid)
 						{
 					?>
 					<a class="write" href="write_form.php?listtype=<?=$listtype?>">글쓰기</a>

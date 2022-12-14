@@ -7,12 +7,11 @@ var totalcnt = $(".business_inner ul").size(); // 총 개수   ****
 $(".RightBtn").click(function (e) {
   e.preventDefault();
 
-  pcnt++; // 카운터를 1씩 증가
+  pcnt++;
   if (pcnt > totalcnt) {
-    //카운터가 4가되면
     pcnt = 1; //카운터를 1로 바꾼다
   }
-  $(".num strong").text(pcnt); //해당 카운터를 표시한다.
+  $(".num strong").text(pcnt); //해당 카운터를 표시
 
   clearInterval(timeonoff);
   $(".business .business_inner").hide().fadeIn("fast");
@@ -24,7 +23,7 @@ $(".leftBtn").click(function (e) {
   pcnt--; //카운트 1씩 감소
   if (pcnt < 1) {
     //1보다 작아지면 0
-    pcnt = totalcnt; //3으로 바꾼다 총개수..
+    pcnt = totalcnt; //3으로 바꾼다 총개수
   }
   $(".num strong").text(pcnt); //해당 카운트 출력
 
@@ -58,8 +57,6 @@ $(".slide_video ul").after($(".slide_video ul").clone());
 $(".button").click(function (e) {
   e.preventDefault();
 
-  // $(".slide_video ul li").css("transform", "scale(1)").css("margin", "0 10px");
-  //clearInterval(timeonoff);
 
   if ($(this).is(".m2")) {
     //이전버튼 클릭
@@ -72,20 +69,6 @@ $(".button").click(function (e) {
       }
     });
 
-    // cnt++;
-    // if (cnt == 6) {
-    //   cnt = 0;
-    // }
-    // $(".slide_video ul li")
-    //   .eq(cnt)
-    //   .fadeIn("slow")
-    //   .css("transform", "scale(1)")
-    //   .css("margin", "0 10px");
-    // $(".slide_video ul li")
-    //   .eq(cnt + 1)
-    //   .fadeIn("slow")
-    //   .css("transform", "scale(1.3)")
-    //   .css("margin", "0 85px");
   } else if ($(this).is(".m1")) {
     //다음버튼 클릭
 
@@ -102,29 +85,6 @@ $(".button").click(function (e) {
       }
     });
 
-    // cnt--;
-    // $(".slide_video li").each(function () {
-    //   if (cnt == 0) {
-    //     $(".slide_video ul:eq(1) li")
-    //       .eq(cnt + 1)
-    //       .fadeIn("slow")
-    //       .css("transform", "scale(1.3)")
-    //       .css("margin", "0 85px");
-    //   } else if (cnt == -1) {
-    //     $(".slide_video ul:eq(1) li")
-    //       .eq(cnt + 2)
-    //       .fadeIn("slow")
-    //       .css("transform", "scale(1.3)")
-    //       .css("margin", "0 85px");
-    //     cnt = 5;
-    //   } else if (cnt <= 5) {
-    //     $(".slide_video ul li")
-    //       .eq(cnt + 1)
-    //       .fadeIn("slow")
-    //       .css("transform", "scale(1.3)")
-    //       .css("margin", "0 85px");
-    //   }
-    // });
   }
 });
 

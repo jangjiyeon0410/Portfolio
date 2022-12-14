@@ -23,10 +23,8 @@
     <script src="./js/jquery-migrate-1.4.1.min.js"></script>
     <script>
 	    $(document).ready(function() {
-
-        //정규식체크
-        //name 유효성검사		 
-        $("#name").keyup(function() {    // id입력 상자에 id값 입력시
+ 
+        $("#name").keyup(function() {
             var name = $('#name').val();
         
             $.ajax({
@@ -42,7 +40,7 @@
         });	
 
         //nick 중복검사		 
-        $("#nick").keyup(function() {    // id입력 상자에 id값 입력시
+        $("#nick").keyup(function() {
             var nick = $('#nick').val();
         
             $.ajax({
@@ -57,7 +55,6 @@
             });
         });		 
 
-//password 정규식 체크
 function fail(){
     $('#pass_confirm').parent().parent('dl').removeClass('success');
     $('#pass_confirm').parent().parent('dl').addClass('fail');
@@ -68,7 +65,7 @@ function success(){
     $('#pass_confirm').parent().parent('dl').addClass('success');
 }
 
-$("#pass").keyup(function() {    // id입력 상자에 id값 입력시
+$("#pass").keyup(function() {
             var pass = $('#pass').val();
         
             $.ajax({
@@ -83,8 +80,7 @@ $("#pass").keyup(function() {    // id입력 상자에 id값 입력시
             });
         });		 
 
-//password 일치 검사
-$("#pass_confirm").keyup(function() {    // id입력 상자에 id값 입력시
+$("#pass_confirm").keyup(function() {
     var pass = $('#pass').val();
     var pass_confirm = $('#pass_confirm').val();
     if(!pass_confirm){

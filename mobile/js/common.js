@@ -1,8 +1,7 @@
 $(document).ready(function () {
-  var op = false; //네비가 열려있으면(true) , 닫혀있으면(false)
+  var op = false;
 
   $(".menu_ham").click(function () {
-    //메뉴버튼 클릭시
 
     var documentHeight = $(document).height();
     $("#gnb").css("height", documentHeight);
@@ -18,7 +17,7 @@ $(document).ready(function () {
     }
   });
 
-  //2depth 메뉴 교대로 열기 처리
+
   var onoff = [false, false, false, false];
   var arrcount = onoff.length;
 
@@ -29,7 +28,6 @@ $(document).ready(function () {
     console.log(ind);
 
     if (onoff[ind] == false) {
-      //$('#gnb .depth1 ul').hide();
       $(this).parents(".depth1").find("ul").slideDown("fast");
       $(this).parents(".depth1").siblings("li").find("ul").slideUp("fast");
       for (var i = 0; i < arrcount; i++) onoff[i] = false;

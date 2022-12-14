@@ -1,15 +1,6 @@
 <meta charset="utf-8">
 <?
 @extract($_POST);
-/*
-$id = $_POST['id'];
-pass
-pass_confirm
-name
-nick
-hp1, hp2, hp3
-email1, email2
-*/
 
    $hp = $hp1."-".$hp2."-".$hp3;    //010-0000-0000
    $email = $email1."@".$email2;    //jjy@naver.com

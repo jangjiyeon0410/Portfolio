@@ -1,16 +1,16 @@
-var xhr = new XMLHttpRequest(); // XMLHttpRequest 객체를 생성한다.
+var xhr = new XMLHttpRequest(); // XMLHttpRequest 객체 생성
 var responseObject;
 var ind=0;
 var newContent = "";
 xhr.onload = function () {
   // When readystate changes
 
-  responseObject = JSON.parse(xhr.responseText); //서버로 부터 전달된 json 데이터를 responseText 속성을 통해 가져올 수 있다.
-  // parse() 메소드를 호출하여 자바스크립트 객체로 변환한다.
+  responseObject = JSON.parse(xhr.responseText);
+
 };
 
-xhr.open("GET", "./js/sub2_3.json", true); // 요청을 준비한다.
-xhr.send(null); // 요청을 전송한다
+xhr.open("GET", "./js/sub2_3.json", true);
+xhr.send(null);
 
 function popchange(){
   newContent = "";
@@ -59,11 +59,11 @@ $('.pop_btn a').click(function(e){
 
   $('.popup').hide().fadeIn('slow'); 
  
- if($(this).hasClass('pre')){      //3 2 1 0 3 2 1 0 ...
+ if($(this).hasClass('pre')){ 
      if(ind==0)ind=prizeLength;
      ind--;
      popchange();
- }else if($(this).hasClass('next')){       //0 1 2 3 0 1 2 3 ...
+ }else if($(this).hasClass('next')){ 
      if(ind==prizeLength-1)ind=-1;
      ind++;
      popchange();

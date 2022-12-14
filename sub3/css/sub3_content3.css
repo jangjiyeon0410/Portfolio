@@ -39,3 +39,6 @@
 }
 
 
+.fc-direction-ltr .fc-daygrid-event .fc-event-time {
+    cursor: default;
+}

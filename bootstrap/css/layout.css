@@ -253,7 +253,21 @@ nav li h3 a {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
 }
-
+.main_visual>p{
+  font-size: 2vw;
+  color: #fff;
+  font-weight: 700;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  line-height: 1.5em;
+}
+.main_visual>p span{
+  display: block;
+    font-size: 3.5vw;
+}
 .bg-nav {
   background: #fff;
   border-bottom: 1px solid #f3f3f3;
@@ -715,6 +729,14 @@ nav li h3 a {
 
 /* 테블릿 */
 @media screen and (max-width: 991px) {
+  .main_visual>p{
+    font-size: 4vw;
+  }
+  .main_visual>p span{
+      font-size: 5.5vw;
+  }
+
+
   .about-img-div img {
     padding-top: 0;
     margin-top: 20px;
@@ -738,7 +760,7 @@ nav li h3 a {
   }
 }
 
-/* 소형테블릿 */
+/* 소형태블릿 */
 @media screen and (max-width: 767px) {
   .carousel .carousel-control.left {
     left: -20px;

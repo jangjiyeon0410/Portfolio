@@ -18,17 +18,17 @@
 
    for ($i=0; $i<3; $i++)
    {
-		if ($copied_name[$i])      //첨부된 파일이 있으면
+		if ($copied_name[$i]) 
 	   {
-			$image_name = "./data/".$copied_name[$i];    // './data/2022_11_21_10_20_15_0.jpg'
-			unlink($image_name);    //서버에 있는 파일을 삭제
+			$image_name = "./data/".$copied_name[$i]; 
+			unlink($image_name);
 	   }
    }
 
    $sql = "delete from $table where num = $num";
    mysql_query($sql, $connect);
 
-   $sql2= "delete from free_ripple where parent=$num";      //해당 댓글 삭제
+   $sql2= "delete from free_ripple where parent=$num";
    mysql_query($sql2, $connect);
 
    mysql_close();

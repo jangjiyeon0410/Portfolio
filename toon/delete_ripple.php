@@ -3,10 +3,6 @@
 	@extract($_POST); 
 	@extract($_SESSION);
 
-	// table='free'
-	// num=1 (부모번호) => view.php 필요
-	// ripple_num=1 (댓글번호)
-
       include "../lib/dbconn.php";
 
       $sql = "delete from ripple where num=$ripple_num";

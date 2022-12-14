@@ -6,13 +6,10 @@
   @extract($_GET); 
   @extract($_POST); 
   @extract($_SESSION); 
-   // 이전화면에서 이름이 입력되지 않았으면 "이름을 입력하세요"
-   // 메시지 출력
-   // $id=>입력id값    $pass=>입력 pass
    
   
 
-   if(!$id) {   //아무값도 입력되지 않았냐?
+   if(!$id) {
      echo("
            <script>
              window.alert('아이디를 입력하세요.');
@@ -34,14 +31,14 @@
 
  
 
-   include "../lib/dbconn.php";  //db연결
+   include "../lib/dbconn.php";
 
    $sql = "select * from member where id='$id'";
    $result = mysql_query($sql, $connect);
 
-   $num_match = mysql_num_rows($result); // 1 / 0
+   $num_match = mysql_num_rows($result);
 
-   if(!$num_match)  // 검색된 레코드가 없으면
+   if(!$num_match)
    {
      echo("
            <script>
@@ -51,18 +48,17 @@
          ");
          exit; 
     }
-    else    //해당 아이디가 검색되었으면..   (green/1234)
+    else
     {
-		     $row = mysql_fetch_array($result);  // 검색된 레코드를 $row 배열에 담는다
-             //$row[id] , $row[pass] , .... $row[level]
+		     $row = mysql_fetch_array($result);
         
          $sql ="select * from member where id='$id' and pass=password('$pass')";
          $result = mysql_query($sql, $connect);
-         $num_match = mysql_num_rows($result);  // 1/0
+         $num_match = mysql_num_rows($result);
      
   
 
-        if(!$num_match)  //적은 패스워드와 디비 패스워드가 같지않을때
+        if(!$num_match)
         {
            echo("
               <script>
@@ -73,7 +69,7 @@
 
            exit;
         }
-        else    // 입력 pass 와 테이블에 저장된 pass 일치한다.
+        else
         {
            
            $userid = $row[id];
@@ -81,11 +77,11 @@
 		       $usernick = $row[nick];
 		       $userlevel = $row[level];
   
-           //세션 변수를 등록한다
+           //세션 변수
            $_SESSION['userid'] = $userid;//$_SESSION['userid'] = $row[id];
-           $_SESSION['username'] = $username;//$_SESSION['username'] = $row[name];
-           $_SESSION['usernick'] = $usernick;//$_SESSION['usernick'] = $row[nick];
-           $_SESSION['userlevel'] = $userlevel;//$_SESSION['userlevel'] = $row[level];
+           $_SESSION['username'] = $username;
+           $_SESSION['usernick'] = $usernick;
+           $_SESSION['userlevel'] = $userlevel;
 
            echo("
               <script>

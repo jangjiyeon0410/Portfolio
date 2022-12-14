@@ -11,7 +11,6 @@
 	$result = mysql_query($sql, $connect);
 
     $row = mysql_fetch_array($result);       
-      // 하나의 레코드 가져오기
 	
 	$item_num     = $row[num];
 	$item_id      = $row[id];
@@ -42,22 +41,22 @@
 		$item_content = str_replace("\n", "<br>", $item_content);
 	}
 
-	//첨부된 이미지 가져오기
+
 	for ($i=0; $i<3; $i++)
 	{
-		if ($image_copied[$i]) 	//첨부된 이미지가 있으면
+		if ($image_copied[$i])
 		{
 			$imageinfo = GetImageSize("./data/".$image_copied[$i]);		
-			//배열로 리턴 [이미지너비, 이미지높이, 이미지타입(확장자)]
 
-			$image_width[$i] = $imageinfo[0];		//이미지너비
-			$image_height[$i] = $imageinfo[1];		//이미지높이
-			$image_type[$i]  = $imageinfo[2];		//이미지종류
 
-			if ($image_width[$i] > 785)		//이미지 저비를 제한
+			$image_width[$i] = $imageinfo[0];
+			$image_height[$i] = $imageinfo[1];
+			$image_type[$i]  = $imageinfo[2];
+
+			if ($image_width[$i] > 785)
 				$image_width[$i] = 785;
 		}
-		else		//첨부된 이미지가 없으면
+		else
 		{
 			$image_width[$i] = "";
 			$image_height[$i] = "";
@@ -67,7 +66,7 @@
 
 	$new_hit = $item_hit + 1;
 
-	$sql = "update $table set hit=$new_hit where num=$num";   // 글 조회수 증가시킴
+	$sql = "update $table set hit=$new_hit where num=$num"; 
 	mysql_query($sql, $connect);
 ?>
 <!DOCTYPE html>
@@ -77,10 +76,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>고객지원 - 공지사항</title>
-    <link rel="stylesheet" href="../common/css/common.css" />
-    <link rel="stylesheet" href="../common/css/sub_common.css" />
-    <link rel="stylesheet" href="../common/css/sub6_common.css" />
-    <link rel="stylesheet" href="./css/list.css" />
+    <link rel="stylesheet" href="../common/css/common.css">
+    <link rel="stylesheet" href="../common/css/sub_common.css">
+    <link rel="stylesheet" href="../common/css/sub6_common.css">
+    <link rel="stylesheet" href="./css/list.css">
 	<script src="https://kit.fontawesome.com/cdd59ed73b.js" crossorigin="anonymous"></script>
     <script src="../common/js/prefixfree.min.js"></script>
 	<script>
@@ -96,7 +95,6 @@
 		}
 
 		function del(href) 	
-		//매개변수로 'delete.php?num=<?=$num?>' 넘김 (page, scale 같이 넘기든가~)
 		{
 			if(confirm("한번 삭제한 자료는 복구할 방법이 없습니다.\n\n정말 삭제하시겠습니까?")) {
 					document.location.href = href;
@@ -107,7 +105,7 @@
 	<body>
 		<? include "../common/sub_header.html" ?>
 		<div class="main">
-			<img src="./images/sub6_main.jpg" alt="" />
+			<img src="./images/sub6_main.jpg" alt="">
 			<h3>진흥원소식</h3>
 			<span>NOTICE</span>
 			</div>
@@ -158,10 +156,10 @@
 							if ($image_copied[$i])
 							{
 								$img_name = $image_copied[$i];
-								$img_name = "./data/".$img_name;	//2022_11_21_10_20_15_0.jpg
-								$img_width = $image_width[$i];		//./data///2022_11_21_10_20_15_0.jpg
+								$img_name = "./data/".$img_name;
+								$img_width = $image_width[$i];
 								
-								echo "<img src='$img_name' width='$img_width'>"."<br><br>";
+								echo "<img src='$img_name' width='$img_width' alt=''>"."<br><br>";
 							}
 						}
 					?>
@@ -239,7 +237,7 @@
 					<a href="list.php?table=<?=$table?>&page=<?=$page?>&listtype=<?=$listtype?>">목록</a>
 					<? 
 						if($userid==$item_id || $userlevel==1 || $userid=="superadmin")
-						// 로그인된 아이디 == 글쓴이 이거나 최고 관리자면 참
+						
 						{
 					?>
 					<a href="write_form.php?table=<?=$table?>&mode=modify&num=<?=$num?>&page=<?=$page?>&listtype=<?=$listtype?>">수정</a>
@@ -248,7 +246,7 @@
 						}
 					?>
 					<? 
-						if($userid)  //로그인이 되면 글쓰기
+						if($userid)
 						{
 					?>
 					<a class="write" href="write_form.php?table=<?=$table?>&listtype=<?=$listtype?>">글쓰기</a>
@@ -277,20 +275,20 @@
 			$(document).on('click', '.modify', function(e){
 				e.preventDefault();
 
-				$('.comment_wrap .comment_list li dl dd p').show();	//	전체 댓글 보이기
-				$('.comment_wrap .comment_list li dl dd .comment_modify').hide();	//	전체 수정폼 감추기
-				$('.comment_wrap .comment_list li .func .modify').html(modify);	// 전체 버튼변경 => 수정버튼
+				$('.comment_wrap .comment_list li dl dd p').show();
+				$('.comment_wrap .comment_list li dl dd .comment_modify').hide();
+				$('.comment_wrap .comment_list li .func .modify').html(modify);
 
-				repple_value = $(this).parent().prev().find('dd').find('p').text();	// content 텍스트 저장
+				repple_value = $(this).parent().prev().find('dd').find('p').text();
 				// console.log(repple_value);
 
-				$(this).parent().prev().find('p').hide();	// 해당 댓글 감추기
-				$(this).parent().prev().find('.comment_modify').show();	// 해당 수정폼 보이기
+				$(this).parent().prev().find('p').hide();
+				$(this).parent().prev().find('.comment_modify').show();
 				$(this).parent().prev().find('.comment_modify').find('textarea').html(repple_value);
 				// console.log(aaa);
 
-				$(this).html(cancel);	// 해당 버튼 변경 => 삭제버튼
-				$(this).removeClass('modify').addClass('cancel');	// 해당 버튼 클래스 cancel로 변경
+				$(this).html(cancel);
+				$(this).removeClass('modify').addClass('cancel');
 
 			});
 
@@ -298,10 +296,10 @@
 			$(document).on('click', '.cancel', function(e){
 				e.preventDefault();
 
-				$(this).parent().prev().find('p').show();	// 해당 댓글 보이기
-				$(this).parent().prev().find('.comment_modify').hide();	// 해당 수정폼 감추기
-				$(this).html(modify);	// 해당 버튼 변경 => 수정버튼
-				$(this).removeClass('cancel').addClass('modify');	// 해당 버튼 클래스 modify로 
+				$(this).parent().prev().find('p').show();
+				$(this).parent().prev().find('.comment_modify').hide();
+				$(this).html(modify);
+				$(this).removeClass('cancel').addClass('modify');
 				
 			});
 

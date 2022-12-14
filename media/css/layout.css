@@ -102,9 +102,6 @@ svg {
 svg.effectOn {
   display: block;
 }
-/* svg text.on{
-  display: block;
-} */
 @keyframes stroke-offset {
   0% {
     fill-opacity: 0;
@@ -133,7 +130,6 @@ svg.effectOn {
 #content > div {
   position: relative;
   overflow: hidden;
-  /* margin-top: 2vw; */
 }
 #content h3 {
   font-family: "Bodoni Moda", serif;
@@ -279,7 +275,6 @@ svg.effectOn {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 8;
-  /* font-size: 1.25rem; */
   line-height: 2em;
 }
 .character .maggie .text_box {

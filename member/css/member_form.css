@@ -5,6 +5,10 @@ body {
   margin: 50px auto;
   display: block;
   width: 350px;
+  height: 85px;
+  text-indent: -999px;
+  font-size: 0;
+  background: url(../images/join_logo.png);
 }
 #content {
   background: #fff;
@@ -57,7 +61,6 @@ dl:last-child dt::after {
 dl:nth-child(6) select {
   width: 31%;
   color: #333;
-  /* appearance: none; */
 }
 dl:nth-child(6) dd,
 dl:nth-child(7) dd {

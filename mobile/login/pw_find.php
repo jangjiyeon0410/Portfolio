@@ -23,21 +23,21 @@
 <script>
 	$(document).ready(function() {
 
-         $(".find").click(function() {    // id입력 상자에 id값 입력시
-            var id = $('.find_id').val(); //green2
-            var name = $('.find_name').val(); //홍길동
+         $(".find").click(function() {
+            var id = $('.find_id').val();
+            var name = $('.find_name').val();
             var hp1 = $('#hp1').val(); 
             var hp2 = $('#hp2').val(); 
             var hp3 = $('#hp3').val(); 
 
             $.ajax({
                 type: "POST",
-                url: "find2.php", /*매개변수인 check_id.php파일을 post방식으로 넘기세요*/
-                data: "id="+ id+ "&name="+ name+ "&hp1="+hp1+ "&hp2="+hp2+ "&hp3="+hp3,  /*매개변수id도 같이 넘겨줌*/
+                url: "find2.php",
+                data: "id="+ id+ "&name="+ name+ "&hp1="+hp1+ "&hp2="+hp2+ "&hp3="+hp3,
                 cache: false, 
-                success: function(data) /*이 메소드가 완료되면 data라는 변수 안에 echo문이 들어감*/
+                success: function(data)
                 {
-                     $("#loadtext").html(data); /*span안에 있는 태그를 사용할것이기 때문에 html 함수사용*/
+                     $("#loadtext").html(data); 
                 }
             });
              

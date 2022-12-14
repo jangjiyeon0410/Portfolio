@@ -205,6 +205,7 @@ img {
   background: url(../images/logo.png) no-repeat;
   text-indent: -9999px;
   overflow: hidden;
+  /* font-size: 0; */
 }
 #headerArea #gnb {
   width: 900px;

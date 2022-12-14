@@ -27,7 +27,7 @@
     
 
 
-   mysql_close();                // DB 연결 끊기
+   mysql_close();
    echo "
 	   <script>
 	     window.alert('회원정보가 수정되었습니다.');

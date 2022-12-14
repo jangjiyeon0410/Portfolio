@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         center: 'title',
         right: 'today dayGridMonth'
       },
-      initialDate: ctoday,
+      initialDate: '2022-09-01',
       navLinks: true, // can click day/week names to navigate views
       editable: true,
       dayMaxEvents: true, // allow "more" link when too many events

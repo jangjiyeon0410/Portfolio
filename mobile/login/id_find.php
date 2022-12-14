@@ -11,7 +11,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>한국만화영상진흥원 - 아이디찾기</title>
-<!-- <link rel="stylesheet" href="css/search.css"> -->
 <link rel="stylesheet" href="css/login.css">
 <script
       src="https://kit.fontawesome.com/32507a69fa.js"
@@ -23,24 +22,24 @@
 <script>
 	$(document).ready(function() {
 
-$(".find").click(function() {    // id입력 상자에 id값 입력시
-   var name = $('#name').val(); //홍길동
-   var hp1 = $('#hp1').val(); //010
-   var hp2 = $('#hp2').val(); //1111
-   var hp3 = $('#hp3').val(); //2222
+$(".find").click(function() { 
+   var name = $('#name').val(); 
+   var hp1 = $('#hp1').val();
+   var hp2 = $('#hp2').val(); 
+   var hp3 = $('#hp3').val(); 
 
    $.ajax({
        type: "POST",
-       url: "find.php",    //접속할(넘길) rul
-       data: "name="+ name+ "&hp1="+hp1+ "&hp2="+hp2+ "&hp3="+hp3,  /*매개변수id도 같이 넘겨줌 / &로 연결 (get방식의 주소창 떠올리면 됨)*/
+       url: "find.php", 
+       data: "name="+ name+ "&hp1="+hp1+ "&hp2="+hp2+ "&hp3="+hp3, 
        cache: false, 
-       success: function(data) /*이 메소드가 완료되면 data라는 변수 안에 echo문이 들어감*/
+       success: function(data) 
        {
-            $("#loadtext").html(data); /*span안에 있는 태그를 사용할것이기 때문에 html 함수사용*/
+            $("#loadtext").html(data); 
        }
    });
     
-   $("#loadtext").addClass('loadtexton'); // css 변경
+   $("#loadtext").addClass('loadtexton');
 }); 
 
 });

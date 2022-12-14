@@ -1,4 +1,4 @@
-/* 오시는길 본문 영역 */
+/* scroll animation */
 @keyframes top{
     from{transform: translateY(100px); opacity:0;}
     to{transform:translateY(0); opacity:1;}
@@ -19,6 +19,7 @@
 }
 
 
+/* content */
 
 #content .contentArea{
     width: 1200px;

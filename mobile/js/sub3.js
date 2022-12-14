@@ -29,29 +29,20 @@ var key, value;
   
 function getParams() {
 
-// 현재 페이지의 url   ex2.html?num=1
 var url = decodeURIComponent(location.href);
-// url이 encodeURIComponent 로 인코딩 되었을때는 다시 디코딩 해준다.
-url = decodeURIComponent(url);  //  ex2.html?num=1
+url = decodeURIComponent(url);
 
 var params='';
-// url에서 '?' 문자 이후의 파라미터 문자열까지 자르기
 params = url.substring( url.indexOf('?')+1, url.length );   
-// 'abcdefg'.substring(2(인덱스번호 2->c),4(c부터 4글자));=> 'cdef'
-// params = "num=1" 
 
-key = params.split("=")[0];  //'num'    =을 기준으로 왼오(0,1)
-value = params.split("=")[1];  // '1'
+key = params.split("=")[0];
+value = params.split("=")[1];
 
-key = Number(value);    //key=1;
- 
-  //alert(key);
-  //alert(typeof(key));
+key = Number(value);
+
 }
     
 getParams();
-  //함수호출
-//key=1, key=2, key=3
 
 
 window.onload =function(){

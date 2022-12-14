@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인</title>
-    <link rel="stylesheet" href="../common/css/common.css" />
+    <link rel="stylesheet" href="../common/css/common.css">
     <link rel="stylesheet" href="./css/login.css">
     <script src="https://kit.fontawesome.com/f8a0f5a24e.js" crossorigin="anonymous"></script>
 </head>
@@ -25,11 +25,11 @@
             <div id="id_pw_input">
                 <dl>
                     <dt><label for="id">아이디</label></dt>
-                    <dd><input type="text" name="id" class="login_input" placeholder="komacon123" required></dd>
+                    <dd><input id="id" type="text" name="id" class="login_input" placeholder="komacon123" required></dd>
                 </dl>
                 <dl>
                     <dt><label for="pass">비밀번호</label></dt>
-                    <dd><input type="password" name="pass" class="login_input" placeholder="******" required></dd>
+                    <dd><input id="pass" type="password" name="pass" class="login_input" placeholder="******" required></dd>
                 </dl>						
 	        </div>
             <div id="login_button">

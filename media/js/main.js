@@ -40,22 +40,6 @@ img.onload = () => {
   }, 1000);
 };
 
-
-
-// let winScrollTop =  $(window).scrollTop();
-// var winScrollGap = $(window).height() / 2;
-// let characterHeight = $('.character').offset().top - winScrollGap- 100;
-// document.onscroll = () => {
-//   canv.width = img.naturalWidth;
-//   canv.height = img.naturalHeight;
-//   canv.style.display = "block";
-
-//   setTimeout(() => {
-//     draw();
-//   }, 1000);
-// };
-
-
 canv.onmouseover = () => {
   if($(window).width()>=1024){
   speed = 0;
@@ -105,20 +89,6 @@ img2.onload = () => {
 };
 
 
-// document.onscroll = () => {
-//   if (winScrollTop > characterHeight) {
-//     canv2.width = img.naturalWidth;
-//     canv2.height = img.naturalHeight;
-//     canv2.style.display = "block";
-  
-    
-//       setTimeout(() => {
-//         draw2();
-//       }, 5000);
-    
-//   };
-// };
-
 canv2.onmouseover = () => {
   if($(window).width()>=1024){
   speed2 = 0;
@@ -140,8 +110,4 @@ document.addEventListener("wheel", function (e) {
     move = true;
   }
   return false;
-  // else if (e.deltaY < 0 && move == true) {
-  //   // $("html,body").animate({ scrollTop: 0 }, 1000);
-  //   move = false;
-  // }
 });

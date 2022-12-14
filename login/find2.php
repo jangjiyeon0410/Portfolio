@@ -6,16 +6,8 @@
   @extract($_GET); 
   @extract($_POST); 
   @extract($_SESSION); 
-  /*
-$id='green2'
-$name='홍길동'
-$hp1='010'
-$hp2='1111'
-$hp3='2222'
-  */
 
-
-   if(!$id) {  /* !='없으면'*/
+   if(!$id) {
      echo("
            <script>
              window.alert('아이디를 입력하세요');
@@ -25,7 +17,7 @@ $hp3='2222'
          exit;
    }
 
-   if(!$name) {  /* !='없으면'*/
+   if(!$name) {
      echo("
            <script>
              window.alert('이름을 입력하세요');
@@ -49,11 +41,11 @@ $hp3='2222'
    include "../lib/dbconn.php";
 
    $sql = "select * from member where id='$id'";
-   $result = mysql_query($sql, $connect); //있으면 1, 없으면 null
+   $result = mysql_query($sql, $connect);
 
-   $num_match = mysql_num_rows($result);  //1 null
+   $num_match = mysql_num_rows($result);
 
-   if(!$num_match) //검색 레코드가 없으면
+   if(!$num_match)
    {
      echo(" 
            <script>
@@ -62,20 +54,17 @@ $hp3='2222'
            </script>
          ");
     }
-    else     //검색 레코드가 있으면
+    else
     {
          $hp = $hp1."-".$hp2."-".$hp3;
         
-		     $row = mysql_fetch_array($result); 
-          //$row[id] ,.... $row[level]
+		     $row = mysql_fetch_array($result);
          $sql ="select * from member where id='$id' and name='$name' and hp='$hp'";
          $result = mysql_query($sql, $connect);
-         $num_match = mysql_num_rows($result); //있으면 1, 없으면 null
-     
-  /* db에 이미 암호화 된 pass를 다시 암호화해서 기존의 pass로 알아낼수 없다,
-  암호화된 pass가 입력된 pass의 암호화와 일치하는가를 확인해야함*/
+         $num_match = mysql_num_rows($result);
 
-        if(!$num_match) //null이면=입력된 pass가 암호화된 패스와 맞지 않다면
+
+        if(!$num_match)
         {
            echo("
               <script>
@@ -86,7 +75,7 @@ $hp3='2222'
 
            exit;
         }
-        else  //1이면=아이디와 이름 전화번호가 모두 일치 한다면
+        else
         {
            $userid = $row[id];
            $username = $row[name];
@@ -95,9 +84,9 @@ $hp3='2222'
 
         function generateRandomPassword($length=8, $strength=0) {
             $vowels = 'aeuy';
-            $consonants = 'bdghjmnpqrstvz';  //랜덤으로 뽑아낼 기본 문자
+            $consonants = 'bdghjmnpqrstvz';
             if ($strength & 1) {
-                $consonants .= 'BDGHJLMNPQRSTVWXZ0123456789!@#$';  //추가할 문자
+                $consonants .= 'BDGHJLMNPQRSTVWXZ0123456789!@#$';
             }
 
             $password = '';
@@ -115,7 +104,7 @@ $hp3='2222'
             return $password;
         }
 
-        $ranpass = generateRandomPassword(8,1);  //랜덤으로 뽑은 8자의 문자
+        $ranpass = generateRandomPassword(8,1);
            
         echo("
            <script>
@@ -131,15 +120,6 @@ $hp3='2222'
             <a href='./login_form.php'>로그인하기</a>
            ");
 
-
-        // echo " <strong>[ 가입정보 ]</strong><br>
-        //    임시비밀번호는 <strong> $ranpass </strong> 입니다<br>
-        //    아이디 : $userid <br>
-        //    이름 : $username <br>
-        //    연락처: $userhp <br>
-        //    가입일자 : $date <br>
-        //    <strong>* 로그인 후 비밀번호를 변경해주세요.</strong>";
-            
         $sql = "update member set pass=password('$ranpass') where id='$id' and name='$name' and hp='$hp'";
         $result = mysql_query($sql, $connect);
         }

@@ -3,12 +3,10 @@
     @extract($_POST);
     @extract($_GET);
     @extract($_SESSION);
-    //새글쓰기 =>  $table
-	//수정글쓰기 => $table, $num, $page, $modify
 
 	include "../lib/dbconn.php";
 
-	if ($mode=="modify") //수정 글쓰기면
+	if ($mode=="modify")
 	{
 		$sql = "select * from $table where num=$num";
 		$result = mysql_query($sql, $connect);
@@ -34,10 +32,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>고객지원 - 공지사항</title>
-    <link rel="stylesheet" href="../common/css/common.css" />
-    <link rel="stylesheet" href="../common/css/sub_common.css" />
-    <link rel="stylesheet" href="../common/css/sub6_common.css" />
-    <link rel="stylesheet" href="./css/list.css" />
+    <link rel="stylesheet" href="../common/css/common.css">
+    <link rel="stylesheet" href="../common/css/sub_common.css">
+    <link rel="stylesheet" href="../common/css/sub6_common.css">
+    <link rel="stylesheet" href="./css/list.css">
 	<script src="https://kit.fontawesome.com/cdd59ed73b.js" crossorigin="anonymous"></script>
     <script src="../common/js/prefixfree.min.js"></script>
 	</head>
@@ -45,7 +43,7 @@
 	<body>
 		<? include "../common/sub_header.html" ?>
 		<div class="main">
-			<img src="./images/sub6_main.jpg" alt="" />
+			<img src="./images/sub6_main.jpg" alt="">
 			<h3>진흥원소식</h3>
 			<span>NOTICE</span>
 			</div>
@@ -88,7 +86,6 @@
 			?>
 				<form  name="board_form" method="post" action="insert.php?table=<?=$table?>&mode=modify&num=<?=$num?>&page=<?=$page?>" enctype="multipart/form-data"> 
 
-				<!-- enctype: 첨부될 파일이 있을 때 들어가야하는 타입 -->
 			<?
 				}
 				else
@@ -128,7 +125,7 @@
 				}
 			?>	
 								<dd>
-									<textarea name="content" id="content" placeholder="내용을 입력해주세요."><?=$item_content?></textarea>
+									<textarea name="contents" id="contents" placeholder="내용을 입력해주세요."><?=$item_content?></textarea>
 								</dd>
 							</dl>
 						</li>
@@ -138,7 +135,7 @@
 								<dd>
 									<input type="file" id="file1" name="upfile[]">
 
-									<? if ($mode=="modify" && $item_file_0){	// 수정하기 및 0번파일이 있을 때 ?>
+									<? if ($mode=="modify" && $item_file_0){ ?>
 									<div class="delete_ok">
 										<span><?=$item_file_0?> 파일이 등록되어 있습니다.</span>
 										<div class="check">
@@ -156,7 +153,7 @@
 								<dd>
 									<input type="file" id="file2" name="upfile[]">
 									
-									<? if ($mode=="modify" && $item_file_1) {	// 수정하기 및 1번파일이 있을 때 ?>
+									<? if ($mode=="modify" && $item_file_1) {?>
 									<div class="delete_ok">
 										<span><?=$item_file_1?> 파일이 등록되어 있습니다.</span>
 										<div class="check">
@@ -174,7 +171,7 @@
 								<dd>
 									<input type="file" id="file3" name="upfile[]">
 									
-									<? if ($mode=="modify" && $item_file_2){	// 수정하기 및 2번파일이 있을 때 ?>
+									<? if ($mode=="modify" && $item_file_2){?>
 									<div class="delete_ok">
 										<span><?=$item_file_2?> 파일이 등록되어 있습니다.</span>
 										<div class="check">

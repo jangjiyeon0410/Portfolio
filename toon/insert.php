@@ -2,13 +2,6 @@
 
 <meta charset="utf-8">
 <?
-
-	//새글쓰기 $table='concert', $subject, $content, $upfilep[]
-	
-	//수정글쓰기 $table='concert', $num=1, $mode=='modify'
-				//$subject, $content, $upfilep[]='파일명.확장자', del_file[]=0/1/2
-
-
 	@extract($_GET); 
 	@extract($_POST); 
 	@extract($_SESSION); 
@@ -43,48 +36,34 @@
 	 exit;
 	}
 
-	$regist_day = date("Y-m-d (H:i)");  // 현재의 '년-월-일-시-분'을 저장
-		/*   단일 파일 업로드 
-		$upfile_name	 = $_FILES["upfile"]["name"];		
-		//$_FILES["첨부된 파일명"]["첨부된 파일의 실제이름"]; (dog1.jpg)
-
-		$upfile_tmp_name = $_FILES["upfile"]["tmp_name"];		
-		//tmp_name => 첨부된 파일의 임시파일이름 (dog1.tmp)
-
-		$upfile_type     = $_FILES["upfile"]["type"];	
-		//첨부된 파일의 타입 종류
-		$upfile_size     = $_FILES["upfile"]["size"];
-		//첨부된 파일의 용량
-		$upfile_error    = $_FILES["upfile"]["error"];
-		//파일 첨부가 제대로 처리되지 않으면 false 반환 (업로드상태를 (true/false)형태로 반환함)
-		*/
+	$regist_day = date("Y-m-d (H:i)");
 
 	// 다중 파일 업로드
-	$files = $_FILES["upfile"];		//배열로 리턴
-	$count = count($files["name"]);		//count=>배열의 개수
+	$files = $_FILES["upfile"];
+	$count = count($files["name"]);	
 			
 	$upload_dir = './data/';
 
 	for ($i=0; $i<$count; $i++)
 	{
-		$upfile_name[$i]     = $files["name"][$i];		//dog1.jpg
-		$upfile_tmp_name[$i] = $files["tmp_name"][$i];		//dog1.tmp
-		$upfile_type[$i]     = $files["type"][$i];		// image/jpeg, image/jpeg
-		$upfile_size[$i]     = $files["size"][$i];		//22.3kb	단위기준: byte
-		$upfile_error[$i]    = $files["error"][$i];		//true
+		$upfile_name[$i]     = $files["name"][$i];
+		$upfile_tmp_name[$i] = $files["tmp_name"][$i];	
+		$upfile_type[$i]     = $files["type"][$i];
+		$upfile_size[$i]     = $files["size"][$i];	
+		$upfile_error[$i]    = $files["error"][$i];	
       
 		$file = explode(".", $upfile_name[$i]);
-		$file_name = $file[0];	//'dog1'
-		$file_ext  = $file[1];	//'jpg'
+		$file_name = $file[0];
+		$file_ext  = $file[1];
 
-		if (!$upfile_error[$i])		//에러가 없으면
+		if (!$upfile_error[$i])
 		{
-			$new_file_name = date("Y_m_d_H_i_s");	//2022_11_21_12_18_50
-			$new_file_name = $new_file_name."_".$i;		//2022_11_21_12_18_50_01
-			$copied_file_name[$i] = $new_file_name.".".$file_ext;   //2022_11_21_12_18_50_01.jpg   
-			$uploaded_file[$i] = $upload_dir.$copied_file_name[$i];		// .data/2022_11_21_12_18_50_01.jpg0
+			$new_file_name = date("Y_m_d_H_i_s");
+			$new_file_name = $new_file_name."_".$i;
+			$copied_file_name[$i] = $new_file_name.".".$file_ext; 
+			$uploaded_file[$i] = $upload_dir.$copied_file_name[$i];
 
-			if( $upfile_size[$i]  > 500000 ) {		//50만bite => 500kb
+			if( $upfile_size[$i]  > 500000 ) {
 				echo("
 				<script>
 				alert('업로드 파일 크기가 지정된 용량(500KB)을 초과합니다! 파일 크기를 체크해주세요! ');
@@ -93,7 +72,6 @@
 				");
 				exit;
 			}
-				//첨부될 파일의 종류를 걸러냄
 
 			if ( ($upfile_type[$i] != "image/gif") &&
 				($upfile_type[$i] != "image/jpeg") &&
@@ -109,8 +87,7 @@
 					");
 				exit;
 			}
-				//실제 파일 업로드를 하는 메소드 => move_uploaded_file(pc에 있는 암시파일명, 실제 서버에 저장될 파일의 경로)
-				//-> 리턴(업로드성공시: true / false)
+
 
 			if (!move_uploaded_file($upfile_tmp_name[$i], $uploaded_file[$i]) )		
 			//파일 업로드 실패시 
@@ -126,50 +103,50 @@
 		}
 	}
 
-	include "../lib/dbconn.php";       // dconn.php 파일을 불러옴
+	include "../lib/dbconn.php";
 
 	if ($mode=="modify")
 	{
-		$num_checked = count($_POST['del_file']);	//3
+		$num_checked = count($_POST['del_file']);
 		$position = $_POST['del_file'];		
 
-		for($i=0; $i<$num_checked; $i++)                      // delete checked item
+		for($i=0; $i<$num_checked; $i++) 
 		{
-			$index = $position[$i];		//0 1 2
-			$del_ok[$index] = "y";		//del_ok[0]='y' del_ok[1]='y' del_ok[2]='y'
+			$index = $position[$i];
+			$del_ok[$index] = "y";
 		}
 
-		$sql = "select * from $table where num=$num";   // get target record
+		$sql = "select * from $table where num=$num";
 		$result = mysql_query($sql);
 		$row = mysql_fetch_array($result);
 
-		for ($i=0; $i<$count; $i++)					// update DB with the value of file input box
+		for ($i=0; $i<$count; $i++)
 		{
 
-			$field_org_name = "file_name_".$i;			//file_name		file_name_1		file_name_2
-			$field_real_name = "file_copied_".$i;		//file_copied_0		file_copied_1		file_copied_2
+			$field_org_name = "file_name_".$i;
+			$field_real_name = "file_copied_".$i;
 
-			$org_name_value = $upfile_name[$i];			// dog.1jpg
-			$org_real_value = $copied_file_name[$i];		//2022_11_@1_12_18_50_01.jpg
+			$org_name_value = $upfile_name[$i];
+			$org_real_value = $copied_file_name[$i];
 
-			if ($del_ok[$i] == "y")		//삭제 체크된 것은
+			if ($del_ok[$i] == "y")
 			{
-				$delete_field = "file_copied_".$i;		//file_copied_0
-				$delete_name = $row[$delete_field];		//2022_11_21_10_20_15_0.jpg
+				$delete_field = "file_copied_".$i;
+				$delete_name = $row[$delete_field];
 				
-				$delete_path = "./data/".$delete_name;		//	./data/2022_11_21_10_20_15_0.jpg
+				$delete_path = "./data/".$delete_name;
 
-				unlink($delete_path);		// =>삭제
+				unlink($delete_path);
 
 				$sql = "update $table set $field_org_name = '$org_name_value', $field_real_name = '$org_real_value'  where num=$num";
-				mysql_query($sql, $connect);  // $sql 에 저장된 명령 실행
+				mysql_query($sql, $connect);
 			}
-			else		//삭제체크 안한 것
+			else
 			{
 				if (!$upfile_error[$i])
 				{
 					$sql = "update $table set $field_org_name = '$org_name_value', $field_real_name = '$org_real_value'  where num=$num";
-					mysql_query($sql, $connect);  // $sql 에 저장된 명령 실행					
+					mysql_query($sql, $connect); 				
 				}
 			}
 
@@ -181,7 +158,7 @@
 		$content = str_replace("'", "&#039;", $content);
 		
 		$sql = "update $table set  cat='$cat', subject='$subject', content='$content' where num=$num";
-		mysql_query($sql, $connect);  // $sql 에 저장된 명령 실행
+		mysql_query($sql, $connect); 
 	}
 	else
 	{
@@ -205,11 +182,10 @@
 		$sql .= " file_name_0, file_name_1, file_name_2, file_copied_0,  file_copied_1, file_copied_2) ";
 		$sql .= "values('$userid', '$username', '$usernick', '$cat', '$subject', '$content', '$regist_day', 0, '$is_html', ";
 		$sql .= "'$upfile_name[0]', '$upfile_name[1]',  '$upfile_name[2]', '$copied_file_name[0]', '$copied_file_name[1]','$copied_file_name[2]')";
-		mysql_query($sql, $connect);  // $sql 에 저장된 명령 실행
+		mysql_query($sql, $connect); 
 	}
 
-	mysql_close();                // DB 연결 끊기
-
+	mysql_close(); 
 	echo "
 	   <script>
 	    location.href = 'list.php?table=$table&page=$page&listtype=$listtype';

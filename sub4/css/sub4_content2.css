@@ -1,3 +1,6 @@
+
+/* scroll anumation */
+
 @keyframes top{
     from{transform: translateY(100px); opacity:0;}
     to{transform:translateY(0); opacity:1;}
@@ -9,6 +12,8 @@
 .contentArea section{
     opacity: 0;
 }
+
+/* content */
 
 .contentArea{
     width: 1200px;

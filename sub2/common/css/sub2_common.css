@@ -1,12 +1,6 @@
 
-/* 본문컨텐츠 영역 */
 
-.contentArea {
-  width: 1200px;
-  margin: 0 auto;
-}
-
-/* 상단 애니메이션 영역 */
+/* TOP animation */
 
 .keyword_warp {
   overflow: hidden;
@@ -114,7 +108,7 @@
   top: -101px;
 }
 
-/* 본문 내용 */
+/* scroll animation */
 @keyframes top {
   from {transform: translateY(150px); opacity: 0;}
   to {transform: rotate(0); opacity: 1;}
@@ -141,6 +135,16 @@ section.scroll_move{
 
 .keyword_warp strong, .keyword_warp>span, section{
   opacity: 0;
+}
+
+
+
+
+/* content */
+
+.contentArea {
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .contentArea section {

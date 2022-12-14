@@ -6,7 +6,6 @@
    @extract($_SESSION);
   
 
-   // $id='a';
    $fail = "<script>
             $('#id').parent().parent('dl').removeClass('success');
             $('#id').parent().parent('dl').addClass('fail');

@@ -1,9 +1,7 @@
-/* 인사말 본문 영역 */
 @keyframes top{
     from{transform: translateY(50px); opacity:0;}
     to{transform:translateY(0); opacity:1;}
 }
-/* 인사말 본문 영역 */
 @keyframes left{
     from{transform: translateX(-50px); opacity:0;}
     to{transform:translateX(0); opacity:1;}
@@ -31,6 +29,7 @@
 }
 
 
+/* **************************************** content */
 
 #content .contentArea{
     width: 1200px;

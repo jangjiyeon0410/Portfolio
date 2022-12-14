@@ -5,6 +5,10 @@ body {
   margin: 50px auto;
   display: block;
   width: 350px;
+  height: 85px;
+  text-indent: -999px;
+  font-size: 0;
+  background: url(../images/join_logo.png);
 }
 #content {
   background: #fff;
@@ -13,26 +17,7 @@ body {
   padding: 70px;
   border-radius: 30px;
 }
-/* 
-.member_tab {
-  padding: 30px 0;
-  border-top: 1px solid #333;
-}
-.member_tab a {
-  font-size: 24px;
-  padding: 10px;
-  margin: 0 10px;
-}
-.member_tab a.on {
-  border-bottom: 2px solid #333;
-  font-weight: bold;
-}
-.member_tab span {
-  font-size: 24px;
-  padding: 10px;
-  margin: 0 10px;
-  font-weight: bold;
-} */
+
 
 .join {
   text-align: left;
@@ -60,7 +45,6 @@ body {
   overflow-y: scroll;
   height: 180px;
   border: 1px solid #ddd;
-  /* border-radius: 20px; */
   background: #fff;
   font-size: 14px;
   line-height: 1.5em;
