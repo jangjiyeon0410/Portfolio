@@ -1,0 +1,209 @@
+/* scroll animation */
+@keyframes top{
+    from{transform: translateY(100px); opacity:0;}
+    to{transform:translateY(0); opacity:1;}
+}
+@keyframes right{
+    from{transform: translateX(100px); opacity:0;}
+    to{transform:translateX(0); opacity:1;}
+}
+
+.contentArea .parking.scroll_move, .contentArea .bottom_wrap div.scroll_move strong{
+    animation: top 1.3s forwards;
+}
+.contentArea .bottom_wrap div.scroll_move div{
+    animation: right 1.3s forwards;
+}
+.parking, .bottom_wrap div strong, .bottom_wrap div div{
+    opacity: 0;
+}
+
+
+/* content */
+
+#content .contentArea{
+    width: 1200px;
+    margin: 0 auto;
+    line-height: 1.5em;
+    position: relative;
+}
+#map{
+    width: 1200px;
+    height: 550px;
+    border-radius: 400px 400px 0 0;
+    position: relative;
+    top: 0;
+    left: 50%;
+    margin-left: -600px;
+    box-shadow: 2px 2px 20px 0 rgba(0, 0, 0, 10%);
+}
+
+
+.contentArea .parking{
+    overflow: hidden;
+    margin: 200px 0;
+}
+.contentArea .parking img{
+    float: left;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+}
+.contentArea .parking strong{
+    display: block;
+    font-size: 2em;
+}
+.contentArea .parking .parking_left{
+    width: 435px;
+    float: left;
+    margin-right: 160px;
+}
+.parking .parking_left dl dt{
+    font-weight: 700;
+    font-size: 1.25em;
+    color: #e71e10;
+    margin: 40px 0 25px;
+}
+.parking .parking_left dl dd{
+    margin-bottom: 8px;
+}
+
+.contentArea .bottom_wrap{
+    overflow: hidden;
+}
+.contentArea .bottom_wrap strong{
+    float: left;
+    font-size: 2em;
+    display: block;
+    margin-right: 200px;
+}
+.contentArea .bottom_wrap dl{
+    float: left;
+    width: 330px;
+    margin-bottom: 30px;
+    position: relative
+}
+.contentArea .bottom_wrap dt{
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    width: 330px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 9px;
+}
+.contentArea .bottom_wrap dt::before{
+    content: '';
+    width: 330px;
+    height: 8px;
+    background-color: rgba(255, 0, 0, 0.2);
+    position: absolute;
+    top: 30px;
+    left: 0;
+    transform: scale(0);
+    transition: all .5s ease-in-out;
+    transform-origin: 0;
+}
+.contentArea .bottom_wrap dl:hover dt::before{
+    transform: scale(1);
+}
+.contentArea .bottom_wrap strong i{
+    color: #e71e10;
+    margin-right: 10px;
+}
+
+
+.car_rignt dl:nth-of-type(2n-1), .subway dl:nth-of-type(1){
+    margin-right: 80px;
+}
+
+.contentArea .car{
+    overflow: hidden;
+}
+.contentArea .car .car_rignt{
+    width: 740px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+
+.contentArea .car .car_rignt>span{
+    font-size: 1.5em;
+    font-weight: 700;
+    display: block;
+    color: #e71e10;
+    width: 740px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 20px;
+}
+.contentArea .car .car_rignt p{
+    margin: 20px 0 50px;
+}
+.contentArea .car .car_rignt p span{
+    color: #e71e10;
+}
+
+.contentArea .subway{
+    overflow: hidden;
+    margin: 200px 0;
+}
+.contentArea .subway dd{
+    margin-bottom: 10px;
+}
+
+.contentArea .bus{
+    margin-bottom: 200px;
+    overflow: hidden;
+    position: relative
+}
+.contentArea .bus strong{
+    margin-right: 160px;
+}
+.contentArea .bus ul{
+    width: 740px;
+    float: left;
+    margin-top: 30px;
+    border-top: 2px solid #333;
+    padding-top: 30px;
+}
+.contentArea .bus ul li{
+    font-size: 16px;
+    margin-bottom: 32px;
+}
+.contentArea .bus ul li span{
+    display: block;
+    width: 65px;
+    float: left;
+    text-align: center;
+    font-weight: 500;
+    margin-right: 20px;
+    height: 30px;
+    border-radius: 20px;
+    color: #fff;
+    padding-top: 2px;
+}
+.bus li:nth-child(1) span, li:nth-child(2) span{
+    background: #0475f4;
+}
+li:nth-child(3) span, li:nth-child(4) span{
+    background: #3cc344;
+}
+li:nth-child(5) span{
+    background: #fb5852;
+}
+li:nth-child(6) span, li:nth-child(7) span, li:nth-child(8) span,li:nth-child(9) span, li:nth-child(10) span,li:nth-child(11) span{
+    background: #87c700;
+}
+.contentArea .bus ul::before{
+    content: '';
+    width: 740px;
+    height: 8px;
+    background-color: rgba(255, 0, 0, 0.2);
+    position: absolute;
+    top: 27px;
+    left: 420px;
+    transform: scale(0);
+    transition: all .5s ease-in-out;
+    transform-origin: 0;
+}
+.contentArea .bus ul:hover::before{
+    transform: scale(1);
+}

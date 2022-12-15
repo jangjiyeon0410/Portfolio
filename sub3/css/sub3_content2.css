@@ -1,0 +1,170 @@
+@keyframes top{
+    from{transform: translateY(100px); opacity:0;}
+    to{transform:translateY(0); opacity:1;}
+}
+@keyframes right{
+    from{transform: translateX(100px); opacity:0;}
+    to{transform:translateX(0); opacity:1;}
+}
+
+.contentArea section.scroll_move h3{
+    animation: top 1.3s forwards;
+}
+.contentArea section.scroll_move dl{
+    animation: right 1.3s forwards;
+}
+.contentArea section.scroll_move dl:nth-of-type(2){
+    animation-delay: .4s;
+}
+.contentArea section.scroll_move dl:nth-of-type(3){
+    animation-delay: .8s;
+}
+.contentArea section.scroll_move dl:nth-of-type(4){
+    animation-delay: 1.2s;
+}
+.contentArea section.scroll_move dl:nth-of-type(5){
+    animation-delay: 1.6s;
+}
+.contentArea section h3, .contentArea section dl{
+    opacity: 0;
+}
+
+
+
+section{
+    overflow: hidden;
+    position: relative;
+    line-height: 2em;
+}
+section:nth-of-type(2){
+    margin: 80px 0;
+}
+section:nth-of-type(3){
+    margin-bottom: 80px;
+}
+section h3{
+    width: 300px;
+    font-size: 2.25em;
+    float: left;
+}
+section div{
+    overflow: hidden;
+}
+section dl{
+    float: left;
+    margin: 0 0 120px 100px;
+    position: relative;
+    overflow: hidden;
+    width: 800px;
+}
+section dl span{
+    color: #e71e10;
+    font-weight: 500;
+}
+section dl dt{
+    display: block;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+section dl dt::after{
+    content: '';
+    width: 800px;
+    height: 2px;
+    background: #333;
+    position: absolute;
+    top: 50px;
+    left: -50px;
+}
+section dl dd{
+   font-size: 1.125em;
+} 
+
+.guide dl:nth-of-type(1) dd{
+    float: left;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid #e71e10;text-align: center;
+    position: relative;
+    line-height: 1.5em;
+    font-weight: 700;
+    color: #333;
+    margin: 20px 50px 0 0;
+}
+.guide dl:nth-of-type(1) dd strong{
+    position: absolute;
+    top: -15px;
+    left: 60px;
+    width: 80px;
+    height: 35px;
+    border-radius: 30px;
+    background: #e71e10;
+    color: #fff;
+    padding-top: 3px;
+}
+.guide dl:nth-of-type(1) dd i{
+    position: absolute;
+    top: 90px;
+    left: 210px;
+    color: #e71e10;
+    font-size: 1.5em;
+}
+.guide dl:nth-of-type(1) dd p{
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.guide dl:nth-of-type(1) dd p span{
+    display: block;
+    font-size: 0.75em;
+    margin-top: 5px;
+    font-weight: 400;
+}
+
+.guide dl:nth-of-type(2) dt::after{
+    top: 80px;
+}
+.guide dl:nth-of-type(2) dd{
+    font-size: 1.125em;
+}
+
+.guide>strong{
+    display: block;
+    width: 170px;
+    height: 40px;
+    color: #e71e10;
+    
+    position: absolute;
+    top: 100px;
+    left: 0;
+}
+
+.note dl:nth-of-type(3) dd:nth-of-type(1){
+    font-weight: 500;
+    color: #e71e10;
+    margin-bottom: 10px;
+}
+
+
+table{
+    font-size: .75em;
+}
+table, th, td{
+    border: 1px solid #ccc;
+}
+th, td{
+    padding: 5px;
+}
+td{
+    text-align: center;
+}
+table caption{
+    display: none;
+}
+.cancel{
+    margin-top: 20px;
+    width: 730px;
+}

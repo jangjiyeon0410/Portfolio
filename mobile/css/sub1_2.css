@@ -1,0 +1,142 @@
+#content{
+  text-align: justify;
+}
+.lineMap,
+.vision_mission,
+.goal{
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.vision_mission li {
+  margin-bottom: 50px;
+}
+.vision_mission div {
+  width: 100%;
+  background: #f8f8f8;
+  padding: 20px 0;
+  border-radius: 20px;
+  margin: 20px 0;
+  position: relative;
+}
+.vision_mission li div::after {
+  font-family: "Roboto", sans-serif;
+  font-size: 5em;
+  font-weight: 700;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 25%;
+  color: #f8f8f8;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #e71e10;
+  opacity: 0.2;
+}
+.vision_mission li:nth-child(1) div::after {
+  content: "VISION";
+}
+.vision_mission li:nth-child(2) div::after {
+  content: "MISSION";
+}
+.vision_mission img {
+  width: 100%;
+}
+.vision_mission span {
+  display: block;
+  width: 35%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.vision_mission dl {
+  line-height: 1.5em;
+}
+.vision_mission dt {
+  margin: 15px 0 10px;
+  font-weight: 700;
+  font-size: 1.25em;
+}
+
+h3 {
+  font-size: 1.75em;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.environment {
+  background: #f8f8f8;
+  padding: 65px 0;
+}
+.environment .environment_inner {
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.environment li {
+  position: relative;
+  border-radius: 20px;
+  text-align: center;
+  padding: 25px 0;
+  background: #fff;
+}
+.environment li:nth-of-type(2) {
+  margin: 25px 0;
+}
+.environment li span {
+  display: block;
+  background-color: #e71e10;
+  color: #fff;
+  font-size: 0.825rem;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 25px;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+.environment li img {
+  width: 50px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+.environment li p {
+  font-weight: 500;
+}
+
+.goal {
+  margin: 65px 0;
+}
+.goal .view_contents {
+  border-top: 1px solid #ccc;
+}
+.goal .view_contents:nth-last-child(1) {
+  border-bottom: 1px solid #ccc;
+}
+.goal .view_contents .inner_contents {
+  margin-bottom: 20px;
+  line-height: 1.5em;
+  display: none;
+}
+.goal .view_contents .inner_contents li {
+  color: #666;
+}
+.goal .view_contents .trigger {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 20px 0;
+}
+.goal .view_contents .trigger span:nth-child(2) i {
+  float: right;
+  color: #999;
+}
+
+.goal .view_contents.show .trigger span:nth-child(1) {
+  color: #e71e10;
+}

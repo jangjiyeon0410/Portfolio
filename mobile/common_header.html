@@ -1,0 +1,141 @@
+<div id="skipNav">
+  <a href="#content">본문바로가기</a>
+  <a href="#gnb">네비게이션바로가기</a>
+</div>
+
+<div id="wrap">
+  <header id="headerArea">
+    <div class="header_top">
+      <h1><a href="./index.html">한국만화영상진흥원 로고</a></h1>
+      <a href="#" class="menu_ham">
+        <span>메뉴열기</span>
+      </a>
+    </div>
+    <nav id="gnb">
+      <h2 class="hidden">글로벌네비게이션영역</h2>
+      <div class="nav_top">
+        <?
+          @extract($_GET); 
+          @extract($_POST); 
+          @extract($_SESSION); 
+          // $userid = $__SESSTION['userid'];
+  
+          if(!$userid)
+	        {
+        ?>
+        <ul class="login_logout">
+          <li>
+            <a href="./login/login_form.php">로그인</a>
+          </li>
+          <li>
+            <a href="./member/join.html">회원가입</a>
+          </li>
+        </ul>
+        <?
+          }
+          else
+          {
+        ?>
+        <ul class="login_logout">
+          <li>
+            <a href="./login/logout.php">로그아웃</a>
+          </li>
+          <li>
+            <a href="./member/member_form_modify.php">정보수정</a>
+          </li>
+        </ul>
+        <?
+	        }
+        ?>
+      </div>
+      <div class="nav_bottom">
+        <div class="bottom_inner">
+          <ul class="mainMenu">
+            <li class="depth1">
+              <h3>
+                <a href="#"
+                  ><i class="fa-sharp fa-solid fa-house"></i>진흥원소개<span>
+                    <i class="fa-solid fa-angle-right"></i></span
+                ></a>
+              </h3>
+              <ul>
+                <li><a href="./sub1_1.html">인사말</a></li>
+                <li><a href="./sub1_2.html">비전 및 경영목표</a></li>
+                <li><a href="./sub1_3.html">연혁</a></li>
+                <li><a href="./sub1_4.html">오시는길</a></li>
+              </ul>
+            </li>
+            <li class="depth1">
+              <h3>
+                <a href="#"
+                  ><i class="fa-sharp fa-solid fa-print"></i>사업소개<span>
+                    <i class="fa-solid fa-angle-right"></i></span
+                ></a>
+              </h3>
+              <ul>
+                <li><a href="./sub2_1.html">창작 및 제작지원</a></li>
+                <li><a href="./sub2_2.html">만화인력양성</a></li>
+                <li><a href="./sub2_3.html">우수만화 컨텐츠 발굴</a></li>
+                <li><a href="./sub2_4.html">창작 인프라 지원</a></li>
+                <li><a href="./sub2_5.html">만화문화 확산</a></li>
+              </ul>
+            </li>
+            <li class="depth1">
+              <h3>
+                <a href="#"
+                  ><i class="fa-solid fa-circle-nodes"></i>클러스터<span>
+                    <i class="fa-solid fa-angle-right"></i></span
+                ></a>
+              </h3>
+              <ul>
+                <li><a href="./sub3_1.html">클러스터소개</a></li>
+                <li><a href="./sub3_2.html">이용안내</a></li>
+              </ul>
+            </li>
+            <li class="depth1">
+              <h3>
+                <a href="#"
+                  ><i class="fa-solid fa-circle-info"></i>고객지원<span>
+                    <i class="fa-solid fa-angle-right"></i></span
+                ></a>
+              </h3>
+              <ul>
+                <li><a href="./sub4_1.html">이달의만화</a></li>
+                <li><a href="./sub4_2.html">FAQ</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <ul class="sns">
+          <li>
+            <a
+              href="https://www.youtube.com/channel/UCcMqhLUStnwZUab4_e4REbg?view_as=subscriber"
+              target="_blank"
+              title="새창에열림"
+              ><span>유튜브</span><img src="./images/sns01x2.png" alt=""></a>
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/manhwa_love?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Escreen-name%3Amanhwa_love%7Ctwcon%5Es1_c1"
+              target="_blank"
+              title="새창에열림"
+              ><span>트위터</span><img src="./images/sns02x2.png" alt=""></a>
+          </li>
+          <li>
+            <a
+              href="https://blog.naver.com/komacon01"
+              target="_blank"
+              title="새창에열림"
+              ><span>네이버블로그</span><img src="./images/sns03x2.png" alt=""></a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/komacon1998/"
+              target="_blank"
+              title="새창에열림"
+              ><span>페이스북</span><img src="./images/sns04x2.png" alt=""></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>

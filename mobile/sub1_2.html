@@ -1,0 +1,181 @@
+<? session_start(); ?>
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>한국만화영상진흥원 - 진흥원소개</title>
+
+    <link rel="apple-touch-icon-precomposed" href="app_icon.png">
+    <link rel="apple-touch-startup-image" href="startup.png">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="./css/sub_common.css">
+    <link rel="stylesheet" href="css/sub1_2.css">
+
+    <script src="js/prefixfree.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/32507a69fa.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+     // <![CDATA[
+      try {
+        window.addEventListener(
+          "load",
+          function () {
+            setTimeout(scrollTo, 0, 0, 1);
+          },
+          false
+        );
+      } catch (e) {}
+     // ]]>
+    </script>
+  </head>
+
+  <body>
+    <? include "./common_header.html" ?>
+    <div class="main_sub">
+      <img src="./images/sub1/sub1_main.png" alt="">
+      <h3>진흥원소개</h3>
+    </div>
+    <article id="content">
+      <div class="lineMap">
+        <a href="../index.html"><i class="fas fa-house"></i></a>
+        <i class="fa-solid fa-angle-right"></i>
+        <a href="./sub_1_1.html"><span>진흥원소개</span></a>
+        <i class="fa-solid fa-angle-right"></i>
+        <a href="./sub_1_2.html"><span>비전 및 경영목표</span></a>
+      </div>
+      <div class="sub_nav">
+        <div class="nav_inner">
+          <ul>
+            <li><a href="./sub1_1.html">인사말</a></li>
+            <li>
+              <a class="current" href="./sub1_2.html">비전 및 경영목표</a>
+            </li>
+            <li><a href="./sub1_3.html">연혁</a></li>
+            <li><a href="./sub1_4.html">오시는길</a></li>
+          </ul>
+        </div>
+      </div>
+      <h2>비전 및 경영목표</h2>
+      <p>
+        <span>한국만화영상진흥원</span>은, 만화영상콘텐츠산업의 중심기지로서
+        한국만화의 가치증대를 위해 노력합니다.
+      </p>
+      <div class="vision_mission">
+        <h3 class="hidden">미션 & 비젼</h3>
+        <ul>
+          <li>
+            <div>
+              <span><img src="./images/sub1/vision.png" alt=""></span>
+            </div>
+            <dl>
+              <dt>만화로 행복할 수 있는 세상</dt>
+              <dd>
+                한국만화영상진흥원은 만화로 우리 국민이 행복할 수 있는 세상을
+                만들겠습니다.
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <div>
+              <span><img src="./images/sub1/mission.png" alt=""></span>
+            </div>
+            <dl>
+              <dt>문화강국, 한국만화가 선도하겠습니다.</dt>
+              <dd>
+                한국 만화의 세계화를 위한 교두보 역할을<br>수행하는 대한민국
+                만화산업의 중심기지로써, 문화강국 대한민국을 만들겠습니다.
+              </dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+      <div class="environment">
+        <div class="environment_inner">
+          <h3>행정환경</h3>
+          <ul>
+            <li>
+              <span>1</span>
+              <img src="./images/sub1/environment_01.png" alt="">
+              <p>사회적 가치 영역 및 실현 요구 확대</p>
+            </li>
+            <li>
+              <span>2</span>
+              <img src="./images/sub1/environment_02.png" alt="">
+              <p>위드-코로나19 정책에 따른 상황 대응책 마련</p>
+            </li>
+            <li>
+              <span>3</span>
+              <img src="./images/sub1/environment_03.png" alt="">
+              <p>지역만화산업 발전 정책에 따른 준비</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="goal">
+        <h3>5대목표</h3>
+        <ul>
+          <li class="view_contents hide">
+            <a class="trigger" href="#">
+              <span>사회적 가치 실현 확대</span>
+              <span><i class="fas fa-plus" aria-hidden="true"></i></span>
+            </a>
+            <ul class="inner_contents">
+              <li>- 민관협치를 통한 선순환구조 정책 마련</li>
+              <li>- 사회적 약자 지원 다양화</li>
+              <li>- 맞춤형 교육지원을 통한 우수인재 육성</li>
+            </ul>
+          </li>
+          <li class="view_contents hide">
+            <a class="trigger" href="#">
+              <span>만화 산업 성장 견인</span>
+              <span><i class="fas fa-plus" aria-hidden="true"></i></span>
+            </a>
+            <ul class="inner_contents">
+              <li>- 우수콘텐츠 발굴 및 2차 사업지원 확대</li>
+              <li>- 해외시장 지출 기회 확대</li>
+              <li>- 만화/웹툰 아카이브 시스템 확장 구축</li>
+            </ul>
+          </li>
+          <li class="view_contents hide">
+            <a class="trigger" href="#">
+              <span>대내외 환경변화 맞춤 지원정책 수립</span>
+              <span><i class="fas fa-plus" aria-hidden="true"></i></span>
+            </a>
+            <ul class="inner_contents">
+              <li>- 정책관계자 네트워크 활성화</li>
+              <li>- 환경변화 대응 경영체계 확립</li>
+            </ul>
+          </li>
+          <li class="view_contents hide">
+            <a class="trigger" href="#">
+              <span>국내 유일 만화도시 브랜드 구축</span>
+              <span><i class="fas fa-plus" aria-hidden="true"></i></span>
+            </a>
+            <ul class="inner_contents">
+              <li>- 시민 문화향유 및 교육 기회 확대</li>
+              <li>- 지역기관 간 협력체계 마련</li>
+              <li>- 축제 관광자원 개발 비즈니스 확대</li>
+            </ul>
+          </li>
+          <li class="view_contents hide">
+            <a class="trigger" href="#">
+              <span>지역인프라 구축 및 네트워크 강화</span>
+              <span><i class="fas fa-plus" aria-hidden="true"></i></span>
+            </a>
+            <ul class="inner_contents">
+              <li>- 지역 클러스터 활성화 프로그램 추진</li>
+              <li>- ‘웹툰융합센터’ 네트워크 기반 마련</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </article>
+    <? include "./common_footer.html" ?>
+    <script src="./js/sub1.js"></script>
+  </body>
+</html>

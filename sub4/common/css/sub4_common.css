@@ -1,0 +1,8 @@
+ /* 서브페이지 공통영역 */
+
+.subNav ul li{
+    width: 300px;
+}
+.subNav ul li:nth-of-type(1){
+    margin-left: 300px;
+}

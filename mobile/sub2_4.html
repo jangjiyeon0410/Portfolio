@@ -1,0 +1,149 @@
+<? session_start(); ?>
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>한국만화영상진흥원 - 사업소개</title>
+
+    <link rel="apple-touch-icon-precomposed" href="app_icon.png">
+    <link rel="apple-touch-startup-image" href="startup.png">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="./css/sub_common.css">
+    <link rel="stylesheet" href="css/sub2_common.css">
+
+    <script src="js/prefixfree.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/32507a69fa.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+     // <![CDATA[
+      try {
+        window.addEventListener(
+          "load",
+          function () {
+            setTimeout(scrollTo, 0, 0, 1);
+          },
+          false
+        );
+      } catch (e) {}
+     // ]]>
+    </script>
+  </head>
+
+  <body>
+    <? include "./common_header.html" ?>
+    <div class="main_sub">
+      <img src="./images/sub2/sub2_main.png" alt="">
+      <h3>사업소개</h3>
+      <span>BUSINESS</span>
+    </div>
+    <article id="content">
+      <div class="lineMap">
+        <a href="../index.html"><i class="fas fa-house"></i></a>
+        <i class="fa-solid fa-angle-right"></i>
+        <a href="./sub_1_1.html"><span>사업소개</span></a>
+        <i class="fa-solid fa-angle-right"></i>
+        <a href="./sub_1_2.html"><span>창작 인프라 지원</span></a>
+      </div>
+      <div class="sub_nav">
+        <div class="nav_inner swiper-container">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <a href="./sub2_1.html">창작및제작지원</a>
+            </li>
+            <li class="swiper-slide">
+              <a href="./sub2_2.html">만화인력양성</a>
+            </li>
+            <li class="swiper-slide">
+              <a href="./sub2_3.html">우수만화컨텐츠발굴</a>
+            </li>
+            <li class="swiper-slide">
+              <a class="current" href="./sub2_4.html">창작인프라지원</a>
+            </li>
+            <li class="swiper-slide">
+              <a href="./sub2_5.html">만화문화확산</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h2>창작 인프라 지원</h2>
+      <div class="inner">
+        <div class="con1">
+          <ul>
+            <li>
+              <h3>웹툰창작체험관·지역웹툰캠퍼스<br>조성 및 운영</h3>
+            </li>
+            <li>“대한민국 방방곡곡 만화가 꽃 피도록”</li>
+            <li>
+              <img
+                src="./images/sub2/infra_01.jpg"
+                alt="웹툰창작체험관 포스터"
+             >
+            </li>
+            <li>
+              웹툰산업의 지역 확대 및 불균형 해소를 위한 만화문화 거점 인프라
+              시설이 전국 방방곡곡 조성 및 운영될 수 있도록 지원합니다. 남녀노소
+              불문하고 웹툰창작을 경험해 볼 수 있는 체험교육부터 폭넓은 교육
+              프로그램을 제공합니다. 작가를 위한 창작공간 제공, 만화 문화행사
+              개최 등 지역 만화산업 활성화를 위한 다각적인 지원활동을
+              수행합니다.
+            </li>
+          </ul>
+        </div>
+        <div class="con2">
+          <ul>
+            <li><h3>1인 창조기업 지원</h3></li>
+            <li>“만화·웹툰 관련 예비창업자 및 기존사업자 실질적 지원”</li>
+            <li>
+              <img
+                src="./images/sub2/infra_02.jpg"
+                alt="웹툰특화 1인창조 지원사업 포스터"
+             >
+            </li>
+            <li>
+              만화·웹툰 캐릭터의 상품화 제작 지원, 웹툰 연재 기획서 제작 지원 및
+              컨설팅을 진행합니다. 이를 바탕으로 만화·웹툰을 토대로 한 작가
+              중심의 예비창업자와 기존사업자에게 실질적인 도움을 체계적으로
+              제공하고자 합니다. 창업진흥원의 지원을 받아 시행하는
+              지원사업입니다.
+            </li>
+          </ul>
+        </div>
+        <div class="con3">
+          <ul>
+            <li><h3>만화인 헬프데스크</h3></li>
+            <li>“만화인 헬프데스크 운영을 통한 만화계 공정상생 환경 조성”</li>
+            <li>
+              <img
+                src="./images/sub2/infra_03.jpg"
+                alt="만화인 헬프데스크 포스터"
+             >
+            </li>
+            <li>
+              만화분야 창작자 및 기업의 고충사항 해소하기 위한 1:1 무료
+              상담서비스입니다. 법률, 노무, 세무, 회계, 창업 분야의 고충사항을
+              온·오프라인 맞춤형 상담을 통해 무료로 컨설팅을 지원하는
+              사업입니다.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+    <? include "./common_footer.html" ?>
+    <script src="js/swiper.min.js"></script>
+    <script>
+      window.onload = function () {
+        var swiper = new Swiper(".swiper-container", {
+          slidesPerView: "auto",
+          spaceBetween: 5,
+          freeMode: true,
+        });
+      };
+    </script>
+    <script src="./js/sub2.js"></script>
+  </body>
+</html>

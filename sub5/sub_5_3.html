@@ -1,0 +1,78 @@
+<? session_start(); ?>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헬프데스크-상담신청</title>
+    <link rel="stylesheet" href="../common/css/common.css">
+    <link rel="stylesheet" href="../common/css/sub_common.css">
+    <link rel="stylesheet" href="./common/css/sub5_common.css">
+    <link rel="stylesheet" href="./css/sub5_content3.css">
+
+    <script
+      src="https://kit.fontawesome.com/32507a69fa.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/common/js/prefixfree.min.js"></script>
+  </head>
+  <body>
+    <? include "../common/sub_header.html" ?>
+    <div class="main">
+      <img src="./common/images/main.jpg" alt="">
+      <h3>헬프데스크</h3>
+      .
+      <span>HELPDESK</span>
+    </div>
+    <div class="subNav">
+      <ul>
+        <li>
+          <a href="./sub_5_1.html">소개<i class="fas fa-circle-notch"></i></a>
+        </li>
+        <li>
+          <a href="./sub_5_2.html"
+            >동영상안내<i class="fas fa-circle-notch"></i
+          ></a>
+        </li>
+        <li>
+          <a class="current" href="./sub_5_3.html"
+            >상담신청<i class="fas fa-circle-notch"></i
+          ></a>
+        </li>
+        <li>
+          <a href="./sub_5_4.html">FAQ<i class="fas fa-circle-notch"></i></a>
+        </li>
+      </ul>
+    </div>
+    <article id="content">
+      <div class="titleArea">
+        <div class="lineMap">
+          <a href="../index.html"><i class="fas fa-house"></i></a>
+          <i class="fa-solid fa-angle-right"></i>
+          <a href="./sub_5_1.html"><span>헬프데스크</span></a>
+          <i class="fa-solid fa-angle-right"></i>
+          <a href="./sub_5_3.html"><span>상담신청</span></a>
+        </div>
+        <h2>상담신청</h2>
+        <p>문의사항을 남겨주시면 답변드리겠습니다.</p>
+      </div>
+      <div class="contentArea">
+        <img src="../sub3/images/content3/wave.png" alt="">
+        <div class="mailAddress scroll">
+          <form action="mail.php" method="post">
+             <ul>
+              <li><label class="hidden" for="uname"></label><input type="text" id="uname" name="uname" placeholder="홍길동" required></li>
+              <li><label class="hidden" for="email"></label><input type="text" id="email" name="email" placeholder="komacon@komacon.com" required></li>
+              <li><label class="hidden" for="phone"></label><input type="text" id="phone" name="phone" placeholder="010-1234-1234" required></li>
+              <li><textarea name="message" placeholder="문의사항을 입력해주세요." required></textarea></li>
+              <li><input type="submit" value="상담신청완료" class="submitBtn"></li>
+            </ul>
+          </form>
+        </div>
+        <img src="../sub3/images/content3/wave_2.png" alt="">
+      </div>
+    </article>
+    <? include "../common/sub_footer.html" ?>
+  </body>
+</html>

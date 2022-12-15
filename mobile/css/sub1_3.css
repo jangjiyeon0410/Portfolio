@@ -1,0 +1,83 @@
+/* 탭박스 */
+#content {
+  width: 100%;
+  padding: 0 5%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.tapMenu {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+}
+.tapMenu li {
+  width: 30%;
+}
+.tapMenu li a {
+  display: block;
+  text-align: center;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  padding: 8px 15px;
+}
+.tapMenu li a h3 {
+  font-weight: 500;
+  font-size: 0.88em;
+  opacity: 0.6;
+}
+
+.history_wrap{
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.history_inner::after {
+  content: "";
+  height: 100%;
+  width: 2px;
+  background: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.history_inner {
+  display: none;
+}
+.history_inner {
+  text-align: left;
+  position: relative;
+}
+.history_inner dl {
+  margin: 0 0 40px 30px;
+  line-height: 1.3em;
+}
+.history_inner dt {
+  font-size: 1.25em;
+  font-weight: 700;
+  position: relative;
+  color: #e71e10;
+}
+.history_inner dt::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e71e10;
+  position: absolute;
+  top: 0;
+  left: -34px;
+}
+.history_inner dd {
+  margin: 10px 0;
+  font-size: 0.8em;
+  display: flex;
+}
+.history_inner dd strong {
+  display: block;
+  margin-right: 10px;
+}

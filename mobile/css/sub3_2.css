@@ -1,0 +1,96 @@
+.inner, .inner h3{
+    width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.qualification, .support, .ask{
+    background: #f8f8f8;
+    padding: 50px 0;
+}
+.application, .space{
+    padding: 50px 0;
+}
+
+#content .inner h3{
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+#content .inner h3 i{
+    color: #e71e10;
+    margin-right: 10px;
+}
+
+.qualification ul li, .support ul li, .ask .inner>ul>li{
+    background: #fff;
+    position: relative;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: .88em;
+    line-height: 1.5em;
+}
+.application .inner>ul li ul, .space .inner>ul li ul{
+    background: #f8f8f8;
+    position: relative;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    line-height: 2em;
+}
+
+#content .inner table{
+    margin-top: 10px;
+}
+#content .inner table{
+    width: 100%;
+}
+#content .inner table, th, td{
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
+    font-size: 0.88em;
+    line-height: 1.5em;
+}
+
+.application a, .space a{
+    overflow: hidden;
+    font-size: 1.25em;
+    display: block;
+    padding: 15px;
+    border-top: 1px solid #ccc;
+}
+.application .click:nth-of-type(3), .space .click:nth-of-type(2){
+    border-bottom: 1px solid #ccc;
+}
+
+.application a i, .space a i{
+    float: right;
+    color: #999;
+}
+.application li ul, .space li ul{
+    display: none;
+}
+
+.application li ul, .space li ul{
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 10px;
+    line-height: 1.8em;
+    font-size: .88em;
+    margin-bottom: 15px;
+}
+.application .small{
+    font-size: .75em;
+}
+
+.ask .inner ul li strong{
+    display: block;
+    margin-bottom: 5px;
+}
+.ask{
+    border-bottom: 20px solid #fff
+}
