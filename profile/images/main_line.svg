@@ -1,0 +1,21 @@
+
+<svg version="1.1" id="main_x5F_line" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;}
+	.st0 {
+		stroke-dasharray: 3094.3984375;
+		stroke-dashoffset: 3094.3984375;
+		animation: dash 1.5s linear .0s forwards;
+		animation-delay: 1s;
+}
+
+@keyframes dash {
+  to{
+    stroke-dashoffset: 0;
+  }
+  }
+</style>
+<path class="st0" d="M808,280c0,0-812.83,317,85.28,231s295.82,62,218.91,81c-76.91,19-798.71,140-246.12,133s94.27,96,68.24,152
+	s56.8,31,56.8,73s-50.88,28-27.22,61s-3.89,44-3.89,44l-28-20"/>
+</svg>
