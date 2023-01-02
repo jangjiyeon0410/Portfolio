@@ -2,17 +2,17 @@
 <svg version="1.1" id="main_x5F_line" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
 	 y="0px" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;}
+	.st0{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
 	.st0 {
 		stroke-dasharray: 3094.3984375;
 		stroke-dashoffset: 3094.3984375;
-		animation: dash 1.5s linear .0s forwards;
+		animation: dash 2s ease-in .0s forwards;
 		animation-delay: 1s;
 }
 
 @keyframes dash {
   to{
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 20;
   }
   }
 </style>
